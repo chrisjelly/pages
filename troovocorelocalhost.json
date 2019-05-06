@@ -33295,10 +33295,9 @@
   },
   "securityDefinitions": {
     "Authorization": {
-      "type": "apiKey",
-      "description": "API Key Authentication",
-      "name": "Authorization",
-      "in": "header"
+      "type": "oauth2",
+	  "flow": "authorizationCode"
+	  "authorizationUrl": "https://localhost/auth/authorise"
     }
   }
 }
