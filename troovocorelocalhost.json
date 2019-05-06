@@ -33296,7 +33296,7 @@
   "securityDefinitions": {
     "Authorization": {
       "type": "oauth2",
-	  "flow": "implicit",
+	  "flow": "password",
 	  "authorizationUrl": "https://localhost/auth/authorise",
     }
   }
