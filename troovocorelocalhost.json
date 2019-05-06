@@ -33298,6 +33298,7 @@
       "type": "oauth2",
 	  "flow": "authorizationCode"
 	  "authorizationUrl": "https://localhost/auth/authorise"
+	  "tokenUrl": "https://localhost/auth/token"
     }
   }
 }
