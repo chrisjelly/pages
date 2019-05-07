@@ -33300,5 +33300,10 @@
       "name": "Authorization",
       "in": "header"
     }
-  }
+  },
+  "security": [
+	{
+		"Authorization": []
+	}
+  ]  
 }
