@@ -1,3 +1,6 @@
+// 20190515120709
+// https://api.troovo.build//swagger/docs/v1
+
 {
   "swagger": "2.0",
   "info": {
@@ -10449,6 +10452,178 @@
         }
       }
     },
+    "/api/1.0/BillingAddresses/{id}": {
+      "get": {
+        "tags": [
+          "BillingAddresses"
+        ],
+        "summary": "Get BillingAddress by Id",
+        "operationId": "BillingAddresses_Get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Troovo.Business.DTO.Fin.BillingAddress"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/BillingAddresses": {
+      "get": {
+        "tags": [
+          "BillingAddresses"
+        ],
+        "summary": "Get all Billing Addresses",
+        "operationId": "BillingAddresses_Get_All",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.Business.DTO.Fin.BillingAddress"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "BillingAddresses"
+        ],
+        "summary": "Update a BillingAddress",
+        "operationId": "BillingAddresses_Update",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "billingAddress",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Troovo.Business.DTO.Fin.BillingAddress"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Troovo.Business.DTO.Fin.BillingAddress"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "BillingAddresses"
+        ],
+        "summary": "Add a Billing Address",
+        "operationId": "BillingAddresses_Add",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "billingAddress",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Troovo.Business.DTO.Fin.BillingAddress"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Troovo.Business.DTO.Fin.BillingAddress"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/BillingAddresses/Permissions": {
+      "get": {
+        "tags": [
+          "BillingAddresses"
+        ],
+        "summary": "Gets the permissions relating to access to this controller.",
+        "operationId": "BillingAddresses_Get_Permissions",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.Data.Models.Core.Users_GetAllowedActionsByController_Result"
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/1.0/BillingBlocks/{id}": {
       "get": {
         "tags": [
@@ -19389,13 +19564,55 @@
         }
       }
     },
-    "/api/1.0/DataFin/billing/{id}": {
+    "/api/1.0/DataFin/billing/csv/{id}": {
       "get": {
         "tags": [
           "FinData"
         ],
         "summary": "Exports the billing data associated with the billing block defined. System user only.",
-        "operationId": "FinData_ExtractFinancials",
+        "operationId": "FinData_ExtractFinancialsCSV",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The Billing (Block) Id of the data to be exported",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Export was completed.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "Export failed due to an internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/DataFin/billing/pdf/{id}": {
+      "get": {
+        "tags": [
+          "FinData"
+        ],
+        "summary": "Exports the billing data associated with the billing block defined. System user only.",
+        "operationId": "FinData_ExtractFinancialsPDF",
         "consumes": [
           
         ],
@@ -21115,6 +21332,7 @@
                   "Web",
                   "App",
                   "EngineEmail",
+                  "BillingInvoice",
                   "VirtualCardCreatedFax",
                   "VirtualCardCreatedSms",
                   "VirtualCardCreatedWeb",
@@ -29044,6 +29262,45 @@
         }
       }
     },
+    "Troovo.Business.DTO.Fin.BillingAddress": {
+      "type": "object",
+      "properties": {
+        "BillingAddressId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Address": {
+          "type": "string"
+        },
+        "Suburb": {
+          "type": "string"
+        },
+        "Postcode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "State": {
+          "type": "string"
+        },
+        "Country": {
+          "type": "string"
+        },
+        "AgencyId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "AgencyGroupId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Contact": {
+          "type": "string"
+        },
+        "Email": {
+          "type": "string"
+        }
+      }
+    },
     "Troovo.Business.DTO.Fin.BillingBlock": {
       "type": "object",
       "properties": {
@@ -29060,6 +29317,17 @@
           "type": "string"
         },
         "Status": {
+          "type": "string"
+        },
+        "AgencyId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "AgencyGroupId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "InvoiceNumber": {
           "type": "string"
         },
         "BillingBlock_InvoiceCodes": {
@@ -29576,6 +29844,7 @@
             "Web",
             "App",
             "EngineEmail",
+            "BillingInvoice",
             "VirtualCardCreatedFax",
             "VirtualCardCreatedSms",
             "VirtualCardCreatedWeb",
@@ -33299,11 +33568,11 @@
       "description": "API Key Authentication",
       "name": "Authorization",
       "in": "header"
-    }
-  },
-  "security": [
-	{
-		"Authorization": []
-	}
-  ]  
+    },
+    "ClientIdAuth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://auth-api.troovo.build/authorise",
+      "flow": "implicit"
+    },	
+  }
 }
