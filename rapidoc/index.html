@@ -2,7 +2,19 @@
   <html>
   <head>
     <meta charset="utf-8"> <!-- Important: rapi-doc uses utf8 charecters -->
-    <script src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+    <script src="https://unpkg.com/rapidoc/dist/rapidoc-min.js">
+	<script>
+        function setApiKey(){
+          var clientId = document.getElementById('clientId');
+		  var clientSecret = document.getElementById('clientSecret');
+		  //const docEl = document.getElementById('thedoc');
+          //const keyInputEl = document.getElementById('key-val-input');
+          //docEl.setAttribute('api-key-name','api_key');
+          //docEl.setAttribute('api-key-location','header');
+          //docEl.setAttribute('api-key-value',keyInputEl.value);
+        }
+    </script>	
+</script>
   </head>
   <body>
     <rapi-doc 
