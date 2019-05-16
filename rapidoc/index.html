@@ -7,7 +7,7 @@
         function setApiKey(){
           var clientId = document.getElementById('clientId').value;
 		  var clientSecret = document.getElementById('clientSecret').value;
-		  document.getElementById('authMsg').text = '';
+		  document.getElementById('authMsg').textContent = '';
 		  
 		  var reqUrl = 'https://troovo-ac-api-authorisation.azurewebsites.net/authorise';
 		  var reqBody = {
@@ -28,11 +28,11 @@
 			}).then(res => res.json())
 			.then(function(response) {
 				if (response.error) {
-					document.getElementById('authMsg').text = 'Unable to authenticate';				
+					document.getElementById('authMsg').textContent = 'Unable to authenticate';				
 				}
 				else {
 					const msgEl = document.getElementById('authMsg');
-					msgEl.text = 'Authenticated';
+					msgEl.textContent = 'Authenticated';
 					
 					const docEl = document.getElementById('thedoc');
 					docEl.setAttribute('api-key-name','Authorization');
@@ -41,7 +41,7 @@
 				}
 			})
 			.catch(function(error) {
-				document.getElementById('authMsg').text = 'Unable to authenticate';			
+				document.getElementById('authMsg').textContent = 'Unable to authenticate';			
 			}); 
         }
     </script>	
