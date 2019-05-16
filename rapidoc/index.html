@@ -4,24 +4,26 @@
     <meta charset="utf-8"> <!-- Important: rapi-doc uses utf8 charecters -->
     <script src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
 	<script>
-        function async setApiKey(){
+        function setApiKey(){
           var clientId = document.getElementById('clientId').value;
 		  var clientSecret = document.getElementById('clientSecret').value;
 		  
+		  var reqUrl = 'https://troovo-ac-api-authorisation.azurewebsites.net/authorise';
 		  var reqBody = {
-			'grant_type': 'client_credentials',
-			'client_id': clientId,
-			'client_secret': clientSecret
+			grant_type: 'client_credentials',
+			client_id: clientId,
+			client_secret: clientSecret
 		  };
 		  
-		  const resp = await fetch('https://troovo-ac-api-authorisation.azurewebsites.net/authorise', {
-			method: 'POST',
-			body: reqBody, 
-			headers:{
-			  'Content-Type': 'application/x-www-form-urlencoded'
-			}
-		  });
-		  const respJson = await response.json();
+			fetch(url, {
+			  method: 'POST',
+			  body: JSON.stringify(data),
+			  headers:{
+				'Content-Type': 'application/json'
+			  }
+			}).then(res => res.json())
+			.then(response => console.log('Success:', JSON.stringify(response)))
+			.catch(error => console.error('Error:', error));		  
 		  
 		  //const docEl = document.getElementById('thedoc');
           //const keyInputEl = document.getElementById('key-val-input');
