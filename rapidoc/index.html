@@ -6,7 +6,14 @@
   </head>
   <body>
     <rapi-doc 
-      spec-url="https://raw.githubusercontent.com/chrisjelly/pages/master/troovocore4.json" 
-    > </rapi-doc>
+      spec-url="https://raw.githubusercontent.com/chrisjelly/pages/master/troovocore.json" 
+	  allow-authentication="false"
+    > 
+		<div slot='header' style='display:flex; margin:0 16px;'> 
+		  <input class='txt' id='clientId' type='text' >
+		  <input class='txt' id='clientSecret' type='text' >
+		  <button class='btn' onclick='setApiKey()'> Login </button >
+		</div>
+	</rapi-doc>
   </body> 
   </html>
