@@ -8,11 +8,12 @@
     <rapi-doc 
       spec-url="https://raw.githubusercontent.com/chrisjelly/pages/master/troovocore2.json" 
 	  allow-authentication="false" 
-	  show-header="true" 
+	  allow-spec-url-load="false" 
+	  allow-spec-file-load="false" 
     > 
 		<div slot='header' style='display:flex; margin:0 16px;'> 
-		  <input class='txt' id='clientId' type='text' >
-		  <input class='txt' id='clientSecret' type='text' >
+		  Client ID: <input class='txt' id='clientId' type='text' >
+		  Client Secret: <input class='txt' id='clientSecret' type='text' >
 		  <button class='btn' onclick='setApiKey()'> Login </button >
 		</div>
 	</rapi-doc>
