@@ -7,6 +7,7 @@
         function setApiKey(){
           var clientId = document.getElementById('clientId').value;
 		  var clientSecret = document.getElementById('clientSecret').value;
+		  document.getElementById('authMsg').text = '';
 		  
 		  var reqUrl = 'https://troovo-ac-api-authorisation.azurewebsites.net/authorise';
 		  var reqBody = {
@@ -27,17 +28,16 @@
 			}).then(res => res.json())
 			.then(function(response) {
 				if (response.error) {
-					document.getElementById('authSuccess').style.visibility = 'hidden';
-					document.getElementById('authFail').style.visibility = 'visible';					
+					document.getElementById('authMsg').text = 'Unable to authenticate';				
 				}
 				else {
-					document.getElementById('authFail').style.visibility = 'hidden';
-					document.getElementById('authSuccess').style.visibility = 'visible';
+					document.getElementById('authMsg').text = 'Authenticated';
+					const docEl = document.getElementById('thedoc');
+					docEl.setAttribute('api-key-value', 'Bearer ' + response.access_token);
 				}
 			})
 			.catch(function(error) {
-				document.getElementById('authSuccess').style.visibility = 'hidden';
-				document.getElementById('authFail').style.visibility = 'visible';			
+				document.getElementById('authMsg').text = 'Unable to authenticate';			
 			});
 		  
 		  //const docEl = document.getElementById('thedoc');
@@ -60,8 +60,7 @@
 		  Client Secret: <input class='txt' id='clientSecret' type='text' >
 		  <button class='btn' onclick='setApiKey()'> Login </button >
 		  
-		  <span id="authSuccess" visibility="hidden">Authenticated</span>
-		  <span id="authFail" visibility="hidden">Unable to authenticate</span>
+		  <span id="authMsg"></span>
 		</div>
 	</rapi-doc>
   </body> 
