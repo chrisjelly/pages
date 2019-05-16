@@ -26,7 +26,7 @@
 				$("#authFail" ).hide();
 				$("#authSuccess" ).show();				
 			})
-			.error(function(error) {
+			.catch(function(error) {
 				$("#authSuccess" ).hide();
 				$("#authFail" ).show();				
 			});
