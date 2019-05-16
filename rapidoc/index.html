@@ -19,7 +19,7 @@
 			  method: 'POST',
 			  body: JSON.stringify(reqBody),
 			  headers:{
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/x-www-form-urlencoded'
 			  }
 			}).then(res => res.json())
 			.then(function(response) {
@@ -51,8 +51,8 @@
 		  Client Secret: <input class='txt' id='clientSecret' type='text' >
 		  <button class='btn' onclick='setApiKey()'> Login </button >
 		  
-		  <span id="authSuccess" hidden="true">Authenticated</span>
-		  <span id="authFail" hidden="true">Unable to authenticate</span>
+		  <span id="authSuccess" visibility="hidden">Authenticated</span>
+		  <span id="authFail" visibility="hidden">Unable to authenticate</span>
 		</div>
 	</rapi-doc>
   </body> 
