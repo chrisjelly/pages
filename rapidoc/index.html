@@ -28,16 +28,20 @@
 			}).then(res => res.json())
 			.then(function(response) {
 				if (response.error) {
-					document.getElementById('authMsg').text = 'Unable to authenticate';				
+					document.getElementById('authMsg').value = 'Unable to authenticate';				
 				}
 				else {
-					document.getElementById('authMsg').text = 'Authenticated';
+					const msgEl = document.getElementById('authMsg');
+					msgEl.value = 'Authenticated';
+					
 					const docEl = document.getElementById('thedoc');
+					docEl.setAttribute('api-key-name','api_key');
+					docEl.setAttribute('api-key-location','header');
 					docEl.setAttribute('api-key-value', 'Bearer ' + response.access_token);
 				}
 			})
 			.catch(function(error) {
-				document.getElementById('authMsg').text = 'Unable to authenticate';			
+				document.getElementById('authMsg').value = 'Unable to authenticate';			
 			}); 
         }
     </script>	
