@@ -23,12 +23,12 @@
 			  }
 			}).then(res => res.json())
 			.then(function(response) {
-				$("#authFail" ).hide();
-				$("#authSuccess" ).show();				
+				document.getElementById('authFail').style.visibility = 'hidden';
+				document.getElementById('authSuccess').style.visibility = 'visible';
 			})
 			.catch(function(error) {
-				$("#authSuccess" ).hide();
-				$("#authFail" ).show();				
+				document.getElementById('authSuccess').style.visibility = 'hidden';
+				document.getElementById('authFail').style.visibility = 'visible';			
 			});
 		  
 		  //const docEl = document.getElementById('thedoc');
