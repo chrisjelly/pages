@@ -23,12 +23,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "bookingId",
@@ -58,12 +52,6 @@
         "operationId": "ArtistGrowth_GetCancelledTransportations",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -95,12 +83,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "bookingId",
@@ -130,12 +112,6 @@
         "operationId": "ArtistGrowth_GetModifiedTransportations",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -167,12 +143,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "bookingId",
@@ -202,12 +172,6 @@
         "operationId": "ArtistGrowth_GetNewTransportations",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -239,12 +203,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -267,12 +225,6 @@
         "operationId": "Bookings_Get",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -301,12 +253,6 @@
         "operationId": "Bookings_Delete",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -337,12 +283,6 @@
         "operationId": "DashBoardReport_Get_BookingList",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -392,12 +332,6 @@
         "operationId": "DashBoardReport_Get_BookingList_Paged",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -465,12 +399,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "startDate",
@@ -516,12 +444,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "bookingId",
@@ -551,12 +473,6 @@
         "operationId": "DashBoardReport_GetBookingDetail_Module",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -588,12 +504,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "bookingId",
@@ -624,12 +534,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -649,12 +553,6 @@
         "operationId": "LidoTrip_Get",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -685,12 +583,6 @@
         "operationId": "OrbitTransaction_Get",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
@@ -772,12 +664,6 @@
         "consumes": [
           
         ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
         "parameters": [
           {
             "name": "bookingId",
@@ -807,12 +693,6 @@
         "operationId": "TroovoTrip_Get",
         "consumes": [
           
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
         ],
         "parameters": [
           {
