@@ -3083,22 +3083,27 @@
       }
     },
     "Result[String]": {
+      "description": "A result with the expected web service return value attached.",
       "type": "object",
       "properties": {
         "Value": {
+          "description": "Return value",
           "type": "string",
           "readOnly": true
         },
         "IsSuccess": {
+          "description": "Boolean value indicating success or failure of operation",
           "type": "boolean",
           "readOnly": true
         },
         "Exception": {
+          "description": "Exception that resulted in a failure",
           "type": "object",
           "readOnly": true
         },
         "FailureStatus": {
           "format": "int32",
+          "description": "If the operation failed and there is no Exception then this status will indicate why it failed.",
           "enum": [
             0,
             1,
