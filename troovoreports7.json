@@ -1,0 +1,2483 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Troovo.API.Reports"
+  },
+  "host": "localhost",
+  "basePath": "/reports",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/1.0/ArtistGrowth/Accommodations/Cancelled/{bookingId}": {
+      "get": {
+        "tags": [
+          "ArtistGrowth"
+        ],
+        "summary": "Get the Cancelled Accommodations report.",
+        "operationId": "ArtistGrowth_GetCancelledAccommodations",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking to generate the report from.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Accommodation"
+              }
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "pk": "00000000-0000-0000-0000-000000001157",
+                  "event": "B9335A96-E422-4D8C-825A-508A9D0C1628",
+                  "start_date": "2019-03-26T00:00:00Z",
+                  "end_date": "2019-03-27T00:00:00Z",
+                  "location": "2b24387b-a4ef-481e-a609-e71734b86f0e",
+                  "travel_type": "HO",
+                  "hotel": "COMFORT SUITES AUSTIN AIRPORT",
+                  "members": [
+                    {
+                      "pk": "274ec097-60db-4670-8855-9a58d9141ae3",
+                      "first_name": "TONY",
+                      "last_name": "STARK",
+                      "confirmation_number": "60265187"
+                    }
+                  ],
+                  "title": "COMFORT SUITES AUSTIN AIRPORT",
+                  "confirmation": "74HA6S",
+                  "notes": "Travel notes",
+                  "address": "8221 W SUNSET BLVD, WEST AUSTIN, TX 90046",
+                  "phone": "(323) 656-1010",
+                  "alias": "Iron Man"
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
+          }
+        }
+      }
+    },
+    "/api/1.0/ArtistGrowth/Transportations/Cancelled/{bookingId}": {
+      "get": {
+        "tags": [
+          "ArtistGrowth"
+        ],
+        "summary": "Get the Cancelled Transportations report.",
+        "operationId": "ArtistGrowth_GetCancelledTransportations",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking to generate the report from.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transportation"
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
+          }
+        }
+      }
+    },
+    "/api/1.0/ArtistGrowth/Accommodations/Modified/{bookingId}": {
+      "get": {
+        "tags": [
+          "ArtistGrowth"
+        ],
+        "summary": "Get the Modified Accommodations report.",
+        "operationId": "ArtistGrowth_GetModifiedAccommodations",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking to generate the report from.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Accommodation"
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
+          }
+        }
+      }
+    },
+    "/api/1.0/ArtistGrowth/Transportations/Modified/{bookingId}": {
+      "get": {
+        "tags": [
+          "ArtistGrowth"
+        ],
+        "summary": "Get the Modified Transportations report.",
+        "operationId": "ArtistGrowth_GetModifiedTransportations",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking to generate the report from.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transportation"
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
+          }
+        }
+      }
+    },
+    "/api/1.0/ArtistGrowth/Accommodations/New/{bookingId}": {
+      "get": {
+        "tags": [
+          "ArtistGrowth"
+        ],
+        "summary": "Get the New Accommodations report.",
+        "operationId": "ArtistGrowth_GetNewAccommodations",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking to generate the report from.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Accommodation"
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
+          }
+        }
+      }
+    },
+    "/api/1.0/ArtistGrowth/Transportations/New/{bookingId}": {
+      "get": {
+        "tags": [
+          "ArtistGrowth"
+        ],
+        "summary": "Get the New Transportations report.",
+        "operationId": "ArtistGrowth_GetNewTransportations",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking to generate the report from.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transportation"
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
+          }
+        }
+      }
+    },
+    "/api/1.0/Bookings": {
+      "get": {
+        "tags": [
+          "Bookings"
+        ],
+        "summary": "Gets all the bookings.",
+        "operationId": "Bookings_GetAll",
+        "consumes": [
+          
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/Bookings/{bookingId}": {
+      "get": {
+        "tags": [
+          "Bookings"
+        ],
+        "summary": "Gets the specified booking identifier.",
+        "operationId": "Bookings_Get",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking identifier.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Pnr"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Bookings"
+        ],
+        "summary": "Deletes the specified booking identifier from the list.",
+        "operationId": "Bookings_Delete",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking identifier.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/DashBoardReport/BookingList": {
+      "get": {
+        "tags": [
+          "DashBoardReport"
+        ],
+        "summary": "Gets the Booking List",
+        "operationId": "DashBoardReport_Get_BookingList",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "Start date",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "End date",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "processWaitMins",
+            "in": "query",
+            "description": "Timeout minutes",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BookingList"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/DashBoardReport/BookingList/Paged": {
+      "get": {
+        "tags": [
+          "DashBoardReport"
+        ],
+        "summary": "Gets the Booking List Paged",
+        "operationId": "DashBoardReport_Get_BookingList_Paged",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Offset (for page index)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit (for page size)",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "Start date",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "End date",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "processWaitMins",
+            "in": "query",
+            "description": "Timeout minutes",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Search terms",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/BookingList_Paged"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/DashBoardReport/BookingSummary": {
+      "get": {
+        "tags": [
+          "DashBoardReport"
+        ],
+        "summary": "Gets the Booking Summary List",
+        "operationId": "DashBoardReport_GetBookingSummary",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "roomResUsername",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/DashBoardReport/BookingDetail/{bookingId}/PNR": {
+      "get": {
+        "tags": [
+          "DashBoardReport"
+        ],
+        "summary": "Gets the PNR Status",
+        "operationId": "DashBoardReport_GetBookingDetail_PNR",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/DashBoardReport/BookingDetail/{bookingId}/Module": {
+      "get": {
+        "tags": [
+          "DashBoardReport"
+        ],
+        "summary": "Gets the Module status",
+        "operationId": "DashBoardReport_GetBookingDetail_Module",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/DashBoardReport/BookingDetail/{bookingId}/CrypticOutput": {
+      "get": {
+        "tags": [
+          "DashBoardReport"
+        ],
+        "summary": "Gets the CrypticOutput",
+        "operationId": "DashBoardReport_GetBookingDetail_CrypticOutput",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/FinanceReport/IssuedValue": {
+      "get": {
+        "tags": [
+          "Fin"
+        ],
+        "summary": "Get Issued Value",
+        "operationId": "Fin_GetIssuedValue",
+        "consumes": [
+          
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/LidoTrip/{bookingId}": {
+      "get": {
+        "tags": [
+          "LidoTrip"
+        ],
+        "summary": "Gets the report to send to Lido for Bookings",
+        "operationId": "LidoTrip_Get",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The ID of the booking.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/OrbitTransaction": {
+      "get": {
+        "tags": [
+          "OrbitTransaction"
+        ],
+        "summary": "Gets the Orbit Transaction Report",
+        "operationId": "OrbitTransaction_Get",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "dateSearchFrom",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "dateSearchTo",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "travellerName",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "vcc",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "accommodationProvider",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "department",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "costCentre",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "cardRequestId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/TravelReconTrip/{bookingId}": {
+      "get": {
+        "tags": [
+          "TravelReconTrip"
+        ],
+        "summary": "Gets the report to send to Travel Recon for Bookings",
+        "operationId": "TravelReconTrip_Get",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The ID of the booking.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/TroovoTrip/{bookingId}": {
+      "get": {
+        "tags": [
+          "TroovoTrip"
+        ],
+        "summary": "Gets the specified booking identifier.",
+        "operationId": "TroovoTrip_Get",
+        "consumes": [
+          
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "description": "The booking identifier.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Accommodation": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "description": "Primary key e.g. '00000000-0000-0000-0000-000000001157'",
+          "type": "string"
+        },
+        "event": {
+          "description": "Event ID e.g. 'B9335A96-E422-4D8C-825A-508A9D0C1628'",
+          "type": "string"
+        },
+        "start_date": {
+          "description": "Check-in date e.g. '2019-03-26T00:00:00Z'",
+          "type": "string"
+        },
+        "end_date": {
+          "description": "Check-out date e.g. '2019-03-27T00:00:00Z'",
+          "type": "string"
+        },
+        "location": {
+          "description": "Location ID e.g. '2b24387b-a4ef-481e-a609-e71734b86f0e'",
+          "type": "string"
+        },
+        "travel_type": {
+          "description": "Type of travel e.g. 'HO'",
+          "enum": [
+            "PL",
+            "GR",
+            "HO"
+          ],
+          "type": "string"
+        },
+        "hotel": {
+          "description": "Hotel name e.g. 'COMFORT SUITES AUSTIN AIRPORT'",
+          "type": "string"
+        },
+        "members": {
+          "description": "Guest details",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Member"
+          }
+        },
+        "title": {
+          "description": "Hotel title e.g. 'COMFORT SUITES AUSTIN AIRPORT'",
+          "type": "string"
+        },
+        "confirmation": {
+          "description": "Confirmation number of the booking e.g. '74HA6S'",
+          "type": "string"
+        },
+        "notes": {
+          "description": "Additional notes e.g. 'Travel notes'",
+          "type": "string"
+        },
+        "address": {
+          "description": "Hotel address e.g. '8221 W SUNSET BLVD, WEST AUSTIN, TX 90046'",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Hotel phone number e.g. '(323) 656-1010'",
+          "type": "string"
+        },
+        "alias": {
+          "description": "Alias e.g. 'Iron Man'",
+          "type": "string"
+        }
+      }
+    },
+    "Member": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "description": "Primary key e.g. '274ec097-60db-4670-8855-9a58d9141ae3'",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "First name e.g. 'Tony'",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "Last name e.g. 'Stark'",
+          "type": "string"
+        },
+        "confirmation_number": {
+          "description": "Booking confirmation number e.g. '60265187'",
+          "type": "string"
+        }
+      }
+    },
+    "Transportation": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "string"
+        },
+        "event": {
+          "type": "string"
+        },
+        "start_date": {
+          "type": "string"
+        },
+        "start_time": {
+          "type": "string"
+        },
+        "end_date": {
+          "type": "string"
+        },
+        "end_time": {
+          "type": "string"
+        },
+        "arrival_location": {
+          "type": "string"
+        },
+        "departure_location": {
+          "type": "string"
+        },
+        "travel_type": {
+          "enum": [
+            "PL",
+            "GR",
+            "HO"
+          ],
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Member"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "confirmation": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "carrier": {
+          "type": "string"
+        },
+        "carrier_identifier": {
+          "type": "string"
+        }
+      }
+    },
+    "Pnr": {
+      "description": "Class for the Pnr object",
+      "type": "object",
+      "properties": {
+        "BookingId": {
+          "format": "int32",
+          "description": "Gets or sets the booking identifier.",
+          "type": "integer"
+        },
+        "GdsSource": {
+          "description": "Gets or sets the GDS source.",
+          "type": "string"
+        },
+        "HasTst": {
+          "description": "Gets or sets a value indicating whether this instance has TST items - only used by Amadeus.",
+          "type": "boolean"
+        },
+        "AirInformation": {
+          "$ref": "#/definitions/PNRAirInformation",
+          "description": "Gets or sets the air information."
+        },
+        "Suppliers": {
+          "description": "Gets or sets the suppliers.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRSupplier"
+          }
+        },
+        "CarSegments": {
+          "description": "Gets or sets the car segments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRCarSegment"
+          }
+        },
+        "EMDs": {
+          "description": "Gets or sets the em ds.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "FormOfPayments": {
+          "description": "Gets or sets the form of payments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRFormOfPayment"
+          }
+        },
+        "FreeTextElements": {
+          "description": "Gets or sets the free text elements.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRFreeTextElement"
+          }
+        },
+        "GdsDatetimeCreated": {
+          "format": "date-time",
+          "description": "Gets or sets the GDS datetime created.",
+          "type": "string"
+        },
+        "GeneralRemarks": {
+          "description": "Gets or sets the general remarks.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRGeneralRemark"
+          }
+        },
+        "HotelSegments": {
+          "description": "Gets or sets the hotel segments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRHotelSegment"
+          }
+        },
+        "OtherPassiveSegments": {
+          "description": "Gets or sets the other passive segments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNROtherSegment"
+          }
+        },
+        "OtherRemarks": {
+          "description": "Gets or sets the other remarks.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRRemark"
+          }
+        },
+        "PassiveCarSegments": {
+          "description": "Gets or sets the passive car segments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRCarSegment"
+          }
+        },
+        "PassiveHotelSegments": {
+          "description": "Gets or sets the passive hotel segments.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRHotelSegment"
+          }
+        },
+        "Commissions": {
+          "description": "Gets or sets the commissions.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRCommission"
+          }
+        },
+        "TicketingModifiers": {
+          "description": "Gets or sets the ticketing modifiers - only used by Travelport.\r\nHolds many items but only interested in the 'Key' -&gt; PNRReference\r\nCommissions is part of ticketing modifiers but held in own class",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRTicketingModifier"
+          }
+        },
+        "QueueMode": {
+          "description": "Gets or sets the queue mode.",
+          "type": "boolean"
+        },
+        "RecordLocator": {
+          "description": "Gets or sets the record locator.",
+          "type": "string"
+        },
+        "ServiceRequests": {
+          "description": "Gets or sets the service requests.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRServiceRequest"
+          }
+        },
+        "TicketElements": {
+          "description": "Gets or sets the ticket elements.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRTicketElement"
+          }
+        },
+        "Travellers": {
+          "description": "Gets or sets the travellers.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRTraveller"
+          }
+        },
+        "BookingDateTime": {
+          "format": "date-time",
+          "description": "Gets or sets the booking date time.",
+          "type": "string"
+        },
+        "AgentId": {
+          "description": "Gets or sets the agent identifier.",
+          "type": "string"
+        },
+        "ClientId": {
+          "description": "Gets or sets the client identifier.",
+          "type": "string"
+        },
+        "IsModified": {
+          "description": "True if this PNR is a modified version of a previous PNR.",
+          "type": "boolean"
+        },
+        "IsCancelled": {
+          "description": "True if this PNR is cancelled.",
+          "type": "boolean"
+        },
+        "Version": {
+          "description": "Gets or sets the version - only used by Travelport.",
+          "type": "string"
+        },
+        "LocatorCode": {
+          "description": "Gets or sets the locator code - only used by Travelport.",
+          "type": "string"
+        },
+        "OwningPCC": {
+          "description": "Gets or sets the owning pcc - only used by Travelport.",
+          "type": "string"
+        },
+        "ActionStatuses": {
+          "description": "Gets or sets the action statuses - only used by Travelport.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRActionStatus"
+          }
+        },
+        "OtherServiceInformations": {
+          "description": "Gets or sets the other service informations - only used by Travelport.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNROtherServiceInformation"
+          }
+        }
+      }
+    },
+    "PNRAirInformation": {
+      "type": "object",
+      "properties": {
+        "AirSegments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRAirSegment"
+          }
+        },
+        "AirPricings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRAirPricing"
+          }
+        },
+        "AssociatedRemarks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRAirRemark"
+          }
+        },
+        "LocatorCode": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRSupplier": {
+      "type": "object",
+      "properties": {
+        "SupplierCode": {
+          "type": "string"
+        },
+        "SupplierLocatorCode": {
+          "type": "string"
+        },
+        "CreatedDateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        }
+      }
+    },
+    "PNRCarSegment": {
+      "type": "object",
+      "properties": {
+        "CarType": {
+          "type": "string"
+        },
+        "CarModel": {
+          "type": "string"
+        },
+        "CompanyName": {
+          "type": "string"
+        },
+        "NumberOfCars": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PickupDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "PickupLocation": {
+          "type": "string"
+        },
+        "PickupLocationNumber": {
+          "type": "string"
+        },
+        "RateInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRRateInfo"
+          }
+        },
+        "RateRequiredCharges": {
+          "type": "string"
+        },
+        "ReturnDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ReturnLocation": {
+          "type": "string"
+        },
+        "SupplementaryInfo": {
+          "type": "string"
+        },
+        "SpecialEquipment": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "PickupLocationAddress": {
+          "type": "string"
+        },
+        "ReturnLocationAddress": {
+          "type": "string"
+        },
+        "CCDetails": {
+          "type": "string"
+        },
+        "ContactInfo": {
+          "$ref": "#/definitions/PNRContactInfo"
+        },
+        "FormOfPayment": {
+          "type": "string"
+        },
+        "FormOfExtendedPayment": {
+          "type": "string"
+        },
+        "GeneralOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRGeneralOption"
+          }
+        },
+        "Pricing": {
+          "type": "string"
+        },
+        "RelatedFlightInfo": {
+          "$ref": "#/definitions/PNRRelatedFlightInfo"
+        },
+        "CompanyCode": {
+          "type": "string"
+        },
+        "Holding": {
+          "type": "string"
+        },
+        "MembershipNumber": {
+          "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "RelatedSegments": {
+          "type": "string"
+        },
+        "RelatedTravellers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ReservationControlNumber": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "Tattoo": {
+          "type": "string"
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "FreeText": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        }
+      }
+    },
+    "PNRFormOfPayment": {
+      "type": "object",
+      "properties": {
+        "FreeText": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedSegments": {
+          "type": "string"
+        },
+        "RelatedTravellers": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRFreeTextElement": {
+      "type": "object",
+      "properties": {
+        "FreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Name": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        }
+      }
+    },
+    "PNRGeneralRemark": {
+      "type": "object",
+      "properties": {
+        "Category": {
+          "type": "string"
+        },
+        "TypeInGds": {
+          "type": "string"
+        },
+        "FreeText": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        }
+      }
+    },
+    "PNRHotelSegment": {
+      "type": "object",
+      "properties": {
+        "ChainCode": {
+          "type": "string"
+        },
+        "CheckInDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "CheckOutDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "HotelCode": {
+          "type": "string"
+        },
+        "HotelIdentification": {
+          "type": "string"
+        },
+        "HotelLocation": {
+          "type": "string"
+        },
+        "HotelName": {
+          "type": "string"
+        },
+        "NumberOfNights": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "NumberOfRooms": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "RateInfo": {
+          "$ref": "#/definitions/PNRRateInfo"
+        },
+        "RoomType": {
+          "type": "string"
+        },
+        "SupplementaryInfo": {
+          "type": "string"
+        },
+        "NumberOfGuests": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "CCDetails": {
+          "type": "string"
+        },
+        "ContactInfo": {
+          "$ref": "#/definitions/PNRContactInfo"
+        },
+        "FormOfPayment": {
+          "type": "string"
+        },
+        "FormOfExtendedPayment": {
+          "type": "string"
+        },
+        "GeneralOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRGeneralOption"
+          }
+        },
+        "Pricing": {
+          "type": "string"
+        },
+        "RelatedFlightInfo": {
+          "$ref": "#/definitions/PNRRelatedFlightInfo"
+        },
+        "CompanyCode": {
+          "type": "string"
+        },
+        "Holding": {
+          "type": "string"
+        },
+        "MembershipNumber": {
+          "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "RelatedSegments": {
+          "type": "string"
+        },
+        "RelatedTravellers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ReservationControlNumber": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "Tattoo": {
+          "type": "string"
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "FreeText": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        }
+      }
+    },
+    "PNROtherSegment": {
+      "type": "object",
+      "properties": {
+        "ArrivalLocation": {
+          "type": "string"
+        },
+        "EndDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "DepartureLocation": {
+          "type": "string"
+        },
+        "StartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "CCDetails": {
+          "type": "string"
+        },
+        "ContactInfo": {
+          "$ref": "#/definitions/PNRContactInfo"
+        },
+        "FormOfPayment": {
+          "type": "string"
+        },
+        "FormOfExtendedPayment": {
+          "type": "string"
+        },
+        "GeneralOptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRGeneralOption"
+          }
+        },
+        "Pricing": {
+          "type": "string"
+        },
+        "RelatedFlightInfo": {
+          "$ref": "#/definitions/PNRRelatedFlightInfo"
+        },
+        "CompanyCode": {
+          "type": "string"
+        },
+        "Holding": {
+          "type": "string"
+        },
+        "MembershipNumber": {
+          "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "RelatedSegments": {
+          "type": "string"
+        },
+        "RelatedTravellers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ReservationControlNumber": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "Tattoo": {
+          "type": "string"
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "FreeText": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        }
+      }
+    },
+    "PNRRemark": {
+      "type": "object",
+      "properties": {
+        "Category": {
+          "type": "string"
+        },
+        "FreeText": {
+          "type": "string"
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        },
+        "RemarkType": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRCommission": {
+      "type": "object",
+      "properties": {
+        "Amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "Percentage": {
+          "format": "double",
+          "type": "number"
+        },
+        "Value": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "Level": {
+          "type": "string"
+        },
+        "Modifier": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "Detail": {
+          "type": "string"
+        },
+        "CommissionOverride": {
+          "type": "boolean"
+        }
+      }
+    },
+    "PNRTicketingModifier": {
+      "type": "object",
+      "properties": {
+        "PlatingCarrier": {
+          "type": "string"
+        },
+        "TourCode": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        }
+      }
+    },
+    "PNRServiceRequest": {
+      "type": "object",
+      "properties": {
+        "CompanyCode": {
+          "type": "string"
+        },
+        "FreeText": {
+          "type": "string"
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "Carrier": {
+          "type": "string"
+        },
+        "MembershipId": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Quantity": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "ServiceRequestType": {
+          "type": "string"
+        },
+        "Seats": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "Status": {
+          "type": "string"
+        },
+        "Travellers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "PNRTicketElement": {
+      "type": "object",
+      "properties": {
+        "AirlineCode": {
+          "type": "string"
+        },
+        "Date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ElectronicTicketFlag": {
+          "type": "string"
+        },
+        "FeeInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRFeeInfo"
+          }
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "Indicator": {
+          "type": "string"
+        },
+        "OfficeId": {
+          "type": "string"
+        },
+        "PassengerType": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        },
+        "RelatedTraveller": {
+          "type": "string"
+        },
+        "TicketNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRTraveller": {
+      "type": "object",
+      "properties": {
+        "DateOfBirth": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "Title": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "EmailAddresses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "PhoneNumbers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRTravellerPhone"
+          }
+        }
+      }
+    },
+    "PNRActionStatus": {
+      "type": "object",
+      "properties": {
+        "ActionStatusId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PNRId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ActionStatusType": {
+          "type": "string"
+        },
+        "TicketDate": {
+          "type": "string"
+        },
+        "ProviderReservationInfoRef": {
+          "type": "string"
+        },
+        "QueueCategory": {
+          "type": "string"
+        },
+        "AirportCode": {
+          "type": "string"
+        },
+        "ProviderCode": {
+          "type": "string"
+        },
+        "SupplierCode": {
+          "type": "string"
+        },
+        "PseudoCityCode": {
+          "type": "string"
+        },
+        "AccountCode": {
+          "type": "string"
+        },
+        "ElementStatusType": {
+          "type": "string"
+        },
+        "RemarkKey": {
+          "type": "string"
+        },
+        "RemarkValue": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        }
+      }
+    },
+    "PNROtherServiceInformation": {
+      "type": "object",
+      "properties": {
+        "OtherServiceInformationId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PNRId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Carrier": {
+          "type": "string"
+        },
+        "Code": {
+          "type": "string"
+        },
+        "Text": {
+          "type": "string"
+        },
+        "KeyOverride": {
+          "type": "boolean"
+        },
+        "ElementStatusType": {
+          "type": "string"
+        },
+        "ProviderReservationInfoRef": {
+          "type": "string"
+        },
+        "ProviderCode": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        }
+      }
+    },
+    "PNRAirSegment": {
+      "type": "object",
+      "properties": {
+        "ArrivalDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ArrivalLocation": {
+          "type": "string"
+        },
+        "ArrivalTerminal": {
+          "type": "string"
+        },
+        "ArrivalTime": {
+          "type": "string"
+        },
+        "Carrier": {
+          "type": "string"
+        },
+        "DepartureLocation": {
+          "type": "string"
+        },
+        "DepartureDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "DepartureTerminal": {
+          "type": "string"
+        },
+        "DepartureTime": {
+          "type": "string"
+        },
+        "Equipment": {
+          "type": "string"
+        },
+        "FlightNumber": {
+          "type": "string"
+        },
+        "MileageFlown": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "OtherTattoo": {
+          "type": "string"
+        },
+        "ServiceClass": {
+          "type": "string"
+        },
+        "Stops": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "CompanyCode": {
+          "type": "string"
+        },
+        "Holding": {
+          "type": "string"
+        },
+        "MembershipNumber": {
+          "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "RelatedSegments": {
+          "type": "string"
+        },
+        "RelatedTravellers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ReservationControlNumber": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "Tattoo": {
+          "type": "string"
+        },
+        "Identifier": {
+          "type": "string"
+        },
+        "FreeText": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        }
+      }
+    },
+    "PNRAirPricing": {
+      "type": "object",
+      "properties": {
+        "ArrivalLocation": {
+          "type": "string"
+        },
+        "CurrencyCode": {
+          "type": "string"
+        },
+        "BasePrice": {
+          "type": "string"
+        },
+        "Taxes": {
+          "type": "string"
+        },
+        "BookingClass": {
+          "type": "string"
+        },
+        "Cabin": {
+          "type": "string"
+        },
+        "Carrier": {
+          "type": "string"
+        },
+        "DepartureLocation": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "OtherFreeText": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        },
+        "OtherTattoo": {
+          "type": "string"
+        },
+        "DepartureDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "RelatedReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRReference"
+          }
+        },
+        "TotalPrice": {
+          "type": "string"
+        },
+        "PricingMethod": {
+          "type": "string"
+        },
+        "Commissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRCommission"
+          }
+        },
+        "AccountCodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRAccountCode"
+          }
+        },
+        "FareBasis": {
+          "type": "string"
+        },
+        "NumberOfPassengers": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PassengerTypeCode": {
+          "type": "string"
+        },
+        "FareGuaranteeDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "FareGuaranteeType": {
+          "type": "string"
+        },
+        "IsTicketed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "PNRAirRemark": {
+      "type": "object",
+      "properties": {
+        "FreeText": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        }
+      }
+    },
+    "PNRReference": {
+      "type": "object",
+      "properties": {
+        "Number": {
+          "type": "string"
+        },
+        "Qualifier": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRRateInfo": {
+      "type": "object",
+      "properties": {
+        "Amount": {
+          "type": "string"
+        },
+        "AmountType": {
+          "type": "string"
+        },
+        "CurrencyCode": {
+          "type": "string"
+        },
+        "Rate": {
+          "format": "double",
+          "type": "number"
+        },
+        "RatePlanIndicator": {
+          "type": "string"
+        },
+        "TotalRate": {
+          "format": "double",
+          "type": "number"
+        },
+        "RatePeriod": {
+          "format": "int32",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "type": "integer"
+        },
+        "DaysRented": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "AmountTax": {
+          "format": "double",
+          "type": "number"
+        },
+        "TotalTax": {
+          "format": "double",
+          "type": "number"
+        },
+        "RatePlanType": {
+          "type": "string"
+        },
+        "BaseAmount": {
+          "type": "string"
+        },
+        "RateGuaranteed": {
+          "type": "boolean"
+        },
+        "RateChangeIndicator": {
+          "type": "string"
+        },
+        "ExtraFeesIncluded": {
+          "type": "string"
+        },
+        "CorporateDiscountID": {
+          "type": "string"
+        },
+        "RatePeriods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PNRRatePeriodInfo"
+          }
+        }
+      }
+    },
+    "PNRContactInfo": {
+      "type": "object",
+      "properties": {
+        "AddressLine1": {
+          "type": "string"
+        },
+        "AddressLine2": {
+          "type": "string"
+        },
+        "CityCode": {
+          "type": "string"
+        },
+        "CityDescription": {
+          "type": "string"
+        },
+        "Fax": {
+          "type": "string"
+        },
+        "Phone": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRGeneralOption": {
+      "type": "object",
+      "properties": {
+        "Type": {
+          "type": "string"
+        },
+        "Text": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "PNRRelatedFlightInfo": {
+      "type": "object",
+      "properties": {
+        "ArrivalLocation": {
+          "type": "string"
+        },
+        "ArrivalDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "DepartureLocation": {
+          "type": "string"
+        },
+        "DepartureDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "PNRFeeInfo": {
+      "type": "object",
+      "properties": {
+        "BaseFee": {
+          "type": "string"
+        },
+        "Code": {
+          "type": "string"
+        },
+        "Tax": {
+          "type": "string"
+        },
+        "Total": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRTravellerPhone": {
+      "type": "object",
+      "properties": {
+        "PhoneType": {
+          "format": "int32",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "type": "integer"
+        },
+        "PhoneNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "PNRAccountCode": {
+      "type": "object",
+      "properties": {
+        "Code": {
+          "type": "string"
+        },
+        "ProviderCode": {
+          "type": "string"
+        },
+        "SupplierCode": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "LineNumber": {
+          "type": "string"
+        },
+        "Reference": {
+          "$ref": "#/definitions/PNRReference"
+        }
+      }
+    },
+    "PNRRatePeriodInfo": {
+      "type": "object",
+      "properties": {
+        "CurrencyCode": {
+          "type": "string"
+        },
+        "BaseAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "AmountTax": {
+          "format": "double",
+          "type": "number"
+        },
+        "Surcharge": {
+          "format": "double",
+          "type": "number"
+        },
+        "Total": {
+          "format": "double",
+          "type": "number"
+        },
+        "EffectiveDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ExpireDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "DeleteResponse": {
+      "description": "Class for Delete Response",
+      "type": "object",
+      "properties": {
+        
+      }
+    },
+    "BookingList": {
+      "type": "object",
+      "properties": {
+        "Booking_ID": {
+          "type": "string"
+        },
+        "Agency": {
+          "type": "string"
+        },
+        "Client": {
+          "type": "string"
+        },
+        "GDS": {
+          "type": "string"
+        },
+        "Queue": {
+          "type": "string"
+        },
+        "PNR": {
+          "type": "string"
+        },
+        "Download_Time": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "Process_End_Time": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "PublisherEnabled": {
+          "type": "boolean"
+        },
+        "EngineEnabled": {
+          "type": "boolean"
+        },
+        "RoomResEnabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "BookingList_Paged": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "BookingList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BookingList"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "description": "API Key Authentication",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}
