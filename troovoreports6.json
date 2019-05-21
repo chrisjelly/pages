@@ -37,8 +37,44 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Accommodation"
+              }
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "pk": "00000000-0000-0000-0000-000000001157",
+                  "event": "B9335A96-E422-4D8C-825A-508A9D0C1628",
+                  "start_date": "2019-03-26T00:00:00Z",
+                  "end_date": "2019-03-27T00:00:00Z",
+                  "location": "2b24387b-a4ef-481e-a609-e71734b86f0e",
+                  "travel_type": "HO",
+                  "hotel": "COMFORT SUITES AUSTIN AIRPORT",
+                  "members": [
+                    {
+                      "pk": "274ec097-60db-4670-8855-9a58d9141ae3",
+                      "first_name": "TONY",
+                      "last_name": "STARK",
+                      "confirmation_number": "60265187"
+                    }
+                  ],
+                  "title": "COMFORT SUITES AUSTIN AIRPORT",
+                  "confirmation": "74HA6S",
+                  "notes": "Travel notes",
+                  "address": "8221 W SUNSET BLVD, WEST AUSTIN, TX 90046",
+                  "phone": "(323) 656-1010",
+                  "alias": "Iron Man"
+                }
+              ]
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -67,8 +103,17 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transportation"
+              }
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -97,8 +142,17 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Accommodation"
+              }
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -127,8 +181,17 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transportation"
+              }
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -157,8 +220,17 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Accommodation"
+              }
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -187,8 +259,17 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transportation"
+              }
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -288,7 +369,7 @@
           {
             "name": "startDate",
             "in": "query",
-            "description": "",
+            "description": "Start date",
             "required": false,
             "type": "string",
             "format": "date-time"
@@ -296,7 +377,7 @@
           {
             "name": "endDate",
             "in": "query",
-            "description": "",
+            "description": "End date",
             "required": false,
             "type": "string",
             "format": "date-time"
@@ -304,7 +385,7 @@
           {
             "name": "processWaitMins",
             "in": "query",
-            "description": "",
+            "description": "Timeout minutes",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -337,6 +418,7 @@
           {
             "name": "offset",
             "in": "query",
+            "description": "Offset (for page index)",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -344,6 +426,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Limit (for page size)",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -351,7 +434,7 @@
           {
             "name": "startDate",
             "in": "query",
-            "description": "",
+            "description": "Start date",
             "required": false,
             "type": "string",
             "format": "date-time"
@@ -359,7 +442,7 @@
           {
             "name": "endDate",
             "in": "query",
-            "description": "",
+            "description": "End date",
             "required": false,
             "type": "string",
             "format": "date-time"
@@ -367,7 +450,7 @@
           {
             "name": "processWaitMins",
             "in": "query",
-            "description": "",
+            "description": "Timeout minutes",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -375,6 +458,7 @@
           {
             "name": "search",
             "in": "query",
+            "description": "Search terms",
             "required": false,
             "type": "string"
           }
@@ -716,47 +800,201 @@
     }
   },
   "definitions": {
+    "Accommodation": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "description": "Primary key",
+          "type": "string"
+        },
+        "event": {
+          "description": "Event ID",
+          "type": "string"
+        },
+        "start_date": {
+          "description": "Check-in date",
+          "type": "string"
+        },
+        "end_date": {
+          "description": "Check-out date",
+          "type": "string"
+        },
+        "location": {
+          "description": "Location code",
+          "type": "string"
+        },
+        "travel_type": {
+          "description": "Type of travel",
+          "enum": [
+            "PL",
+            "GR",
+            "HO"
+          ],
+          "type": "string"
+        },
+        "hotel": {
+          "description": "Hotel name",
+          "type": "string"
+        },
+        "members": {
+          "description": "Guest details",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Member"
+          }
+        },
+        "title": {
+          "description": "Hotel title",
+          "type": "string"
+        },
+        "confirmation": {
+          "description": "Confirmation number of the booking",
+          "type": "string"
+        },
+        "notes": {
+          "description": "Additional notes",
+          "type": "string"
+        },
+        "address": {
+          "description": "Hotel address",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Hotel phone number",
+          "type": "string"
+        },
+        "alias": {
+          "description": "Alias",
+          "type": "string"
+        }
+      }
+    },
+    "Member": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "confirmation_number": {
+          "type": "string"
+        }
+      }
+    },
+    "Transportation": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "string"
+        },
+        "event": {
+          "type": "string"
+        },
+        "start_date": {
+          "type": "string"
+        },
+        "start_time": {
+          "type": "string"
+        },
+        "end_date": {
+          "type": "string"
+        },
+        "end_time": {
+          "type": "string"
+        },
+        "arrival_location": {
+          "type": "string"
+        },
+        "departure_location": {
+          "type": "string"
+        },
+        "travel_type": {
+          "enum": [
+            "PL",
+            "GR",
+            "HO"
+          ],
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Member"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "confirmation": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "carrier": {
+          "type": "string"
+        },
+        "carrier_identifier": {
+          "type": "string"
+        }
+      }
+    },
     "Pnr": {
+      "description": "Class for the Pnr object",
       "type": "object",
       "properties": {
         "BookingId": {
           "format": "int32",
+          "description": "Gets or sets the booking identifier.",
           "type": "integer"
         },
         "GdsSource": {
+          "description": "Gets or sets the GDS source.",
           "type": "string"
         },
         "HasTst": {
+          "description": "Gets or sets a value indicating whether this instance has TST items - only used by Amadeus.",
           "type": "boolean"
         },
         "AirInformation": {
-          "$ref": "#/definitions/PNRAirInformation"
+          "$ref": "#/definitions/PNRAirInformation",
+          "description": "Gets or sets the air information."
         },
         "Suppliers": {
+          "description": "Gets or sets the suppliers.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRSupplier"
           }
         },
         "CarSegments": {
+          "description": "Gets or sets the car segments.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRCarSegment"
           }
         },
         "EMDs": {
+          "description": "Gets or sets the em ds.",
           "type": "array",
           "items": {
             "type": "string"
           }
         },
         "FormOfPayments": {
+          "description": "Gets or sets the form of payments.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRFormOfPayment"
           }
         },
         "FreeTextElements": {
+          "description": "Gets or sets the free text elements.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRFreeTextElement"
@@ -764,75 +1002,89 @@
         },
         "GdsDatetimeCreated": {
           "format": "date-time",
+          "description": "Gets or sets the GDS datetime created.",
           "type": "string"
         },
         "GeneralRemarks": {
+          "description": "Gets or sets the general remarks.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRGeneralRemark"
           }
         },
         "HotelSegments": {
+          "description": "Gets or sets the hotel segments.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRHotelSegment"
           }
         },
         "OtherPassiveSegments": {
+          "description": "Gets or sets the other passive segments.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNROtherSegment"
           }
         },
         "OtherRemarks": {
+          "description": "Gets or sets the other remarks.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRRemark"
           }
         },
         "PassiveCarSegments": {
+          "description": "Gets or sets the passive car segments.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRCarSegment"
           }
         },
         "PassiveHotelSegments": {
+          "description": "Gets or sets the passive hotel segments.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRHotelSegment"
           }
         },
         "Commissions": {
+          "description": "Gets or sets the commissions.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRCommission"
           }
         },
         "TicketingModifiers": {
+          "description": "Gets or sets the ticketing modifiers - only used by Travelport.\r\nHolds many items but only interested in the 'Key' -&gt; PNRReference\r\nCommissions is part of ticketing modifiers but held in own class",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRTicketingModifier"
           }
         },
         "QueueMode": {
+          "description": "Gets or sets the queue mode.",
           "type": "boolean"
         },
         "RecordLocator": {
+          "description": "Gets or sets the record locator.",
           "type": "string"
         },
         "ServiceRequests": {
+          "description": "Gets or sets the service requests.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRServiceRequest"
           }
         },
         "TicketElements": {
+          "description": "Gets or sets the ticket elements.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRTicketElement"
           }
         },
         "Travellers": {
+          "description": "Gets or sets the travellers.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRTraveller"
@@ -840,36 +1092,46 @@
         },
         "BookingDateTime": {
           "format": "date-time",
+          "description": "Gets or sets the booking date time.",
           "type": "string"
         },
         "AgentId": {
+          "description": "Gets or sets the agent identifier.",
           "type": "string"
         },
         "ClientId": {
+          "description": "Gets or sets the client identifier.",
           "type": "string"
         },
         "IsModified": {
+          "description": "True if this PNR is a modified version of a previous PNR.",
           "type": "boolean"
         },
         "IsCancelled": {
+          "description": "True if this PNR is cancelled.",
           "type": "boolean"
         },
         "Version": {
+          "description": "Gets or sets the version - only used by Travelport.",
           "type": "string"
         },
         "LocatorCode": {
+          "description": "Gets or sets the locator code - only used by Travelport.",
           "type": "string"
         },
         "OwningPCC": {
+          "description": "Gets or sets the owning pcc - only used by Travelport.",
           "type": "string"
         },
         "ActionStatuses": {
+          "description": "Gets or sets the action statuses - only used by Travelport.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNRActionStatus"
           }
         },
         "OtherServiceInformations": {
+          "description": "Gets or sets the other service informations - only used by Travelport.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/PNROtherServiceInformation"
@@ -2141,6 +2403,7 @@
       }
     },
     "DeleteResponse": {
+      "description": "Class for Delete Response",
       "type": "object",
       "properties": {
         
