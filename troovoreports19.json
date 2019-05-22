@@ -39,7 +39,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Accommodation"
+                "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Accommodation.Accommodation"
               }
             },
             "examples": {
@@ -105,7 +105,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Transportation"
+                "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Transportation.Transportation"
               }
             }
           },
@@ -144,7 +144,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Accommodation"
+                "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Accommodation.Accommodation"
               }
             }
           },
@@ -183,7 +183,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Transportation"
+                "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Transportation.Transportation"
               }
             }
           },
@@ -222,7 +222,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Accommodation"
+                "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Accommodation.Accommodation"
               }
             }
           },
@@ -261,7 +261,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Transportation"
+                "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Transportation.Transportation"
               }
             }
           },
@@ -288,7 +288,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/Queue"
+              "$ref": "#/definitions/Troovo.Reports.DTO.Bookings.Queue"
             }
           },
           "500": {
@@ -321,7 +321,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/Pnr"
+              "$ref": "#/definitions/Troovo.Reports.DTO.Bookings.Pnr"
             }
           },
           "500": {
@@ -352,7 +352,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/DeleteResponse"
+              "$ref": "#/definitions/Troovo.Reports.DTO.Bookings.DeleteResponse"
             }
           },
           "500": {
@@ -403,7 +403,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/BookingList"
+                "$ref": "#/definitions/Troovo.Reports.DTO.DashBoardReport.BookingList"
               }
             }
           },
@@ -476,7 +476,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/BookingList_Paged"
+              "$ref": "#/definitions/Troovo.Reports.DTO.DashBoardReport.BookingList_Paged"
             }
           },
           "500": {
@@ -526,7 +526,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/BookingSummary"
+                "$ref": "#/definitions/Troovo.Reports.DTO.DashBoardReport.BookingSummary"
               }
             }
           },
@@ -562,7 +562,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/PNR_Status"
+                "$ref": "#/definitions/Troovo.Reports.DTO.DashBoardReport.BookingDetail.PNR_Status"
               }
             }
           },
@@ -604,7 +604,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ModuleStatus"
+                "$ref": "#/definitions/Troovo.Reports.DTO.DashBoardReport.BookingDetail.ModuleStatus"
               }
             }
           },
@@ -647,7 +647,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/Result[String]"
+              "$ref": "#/definitions/Troovo.v2.Common.Result.Result[System.String]"
             }
           },
           "400": {
@@ -719,7 +719,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/LidoTrip"
+              "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.LidoTrip"
             }
           },
           "500": {
@@ -804,7 +804,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/OrbitTransaction"
+                "$ref": "#/definitions/Troovo.Reports.DTO.OrbitTransactionReport.OrbitTransaction"
               }
             }
           },
@@ -838,8 +838,11 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "$ref": "#/definitions/Troovo.Reports.DTO.TravelReconTrip.TravelReconTrip"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -849,7 +852,7 @@
         "tags": [
           "TroovoTrip"
         ],
-        "summary": "Gets the specified booking identifier.",
+        "summary": "Get a Troovo Trip report.",
         "operationId": "TroovoTrip_Get",
         "consumes": [
           
@@ -868,15 +871,18 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.TroovoTrip"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
     }
   },
   "definitions": {
-    "Accommodation": {
+    "Troovo.Reports.DTO.ArtistGrowth.Accommodation.Accommodation": {
       "description": "Accommodation entity",
       "type": "object",
       "properties": {
@@ -917,7 +923,7 @@
           "description": "Guest details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Member"
+            "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Common.Member"
           }
         },
         "title": {
@@ -946,7 +952,7 @@
         }
       }
     },
-    "Member": {
+    "Troovo.Reports.DTO.ArtistGrowth.Common.Member": {
       "type": "object",
       "properties": {
         "pk": {
@@ -967,7 +973,7 @@
         }
       }
     },
-    "Transportation": {
+    "Troovo.Reports.DTO.ArtistGrowth.Transportation.Transportation": {
       "description": "Transportation entity",
       "type": "object",
       "properties": {
@@ -1016,7 +1022,7 @@
           "description": "Passenger details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Member"
+            "$ref": "#/definitions/Troovo.Reports.DTO.ArtistGrowth.Common.Member"
           }
         },
         "title": {
@@ -1041,7 +1047,7 @@
         }
       }
     },
-    "Queue": {
+    "Troovo.Reports.DTO.Bookings.Queue": {
       "description": "Class for Queue object",
       "type": "object",
       "properties": {
@@ -1049,12 +1055,12 @@
           "description": "Gets or sets the items.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/QueueItem"
+            "$ref": "#/definitions/Troovo.Reports.DTO.Bookings.QueueItem"
           }
         }
       }
     },
-    "QueueItem": {
+    "Troovo.Reports.DTO.Bookings.QueueItem": {
       "description": "Class for Queue Item object",
       "type": "object",
       "properties": {
@@ -1090,7 +1096,7 @@
         }
       }
     },
-    "Pnr": {
+    "Troovo.Reports.DTO.Bookings.Pnr": {
       "description": "Class for the Pnr object",
       "type": "object",
       "properties": {
@@ -1108,21 +1114,21 @@
           "type": "boolean"
         },
         "AirInformation": {
-          "$ref": "#/definitions/PNRAirInformation",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRAirInformation",
           "description": "Gets or sets the air information."
         },
         "Suppliers": {
           "description": "Gets or sets the suppliers.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRSupplier"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRSupplier"
           }
         },
         "CarSegments": {
           "description": "Gets or sets the car segments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRCarSegment"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRCarSegment"
           }
         },
         "EMDs": {
@@ -1136,14 +1142,14 @@
           "description": "Gets or sets the form of payments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRFormOfPayment"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRFormOfPayment"
           }
         },
         "FreeTextElements": {
           "description": "Gets or sets the free text elements.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRFreeTextElement"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRFreeTextElement"
           }
         },
         "GdsDatetimeCreated": {
@@ -1155,56 +1161,56 @@
           "description": "Gets or sets the general remarks.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRGeneralRemark"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRGeneralRemark"
           }
         },
         "HotelSegments": {
           "description": "Gets or sets the hotel segments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRHotelSegment"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRHotelSegment"
           }
         },
         "OtherPassiveSegments": {
           "description": "Gets or sets the other passive segments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNROtherSegment"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNROtherSegment"
           }
         },
         "OtherRemarks": {
           "description": "Gets or sets the other remarks.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRRemark"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRRemark"
           }
         },
         "PassiveCarSegments": {
           "description": "Gets or sets the passive car segments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRCarSegment"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRCarSegment"
           }
         },
         "PassiveHotelSegments": {
           "description": "Gets or sets the passive hotel segments.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRHotelSegment"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRHotelSegment"
           }
         },
         "Commissions": {
           "description": "Gets or sets the commissions.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRCommission"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRCommission"
           }
         },
         "TicketingModifiers": {
           "description": "Gets or sets the ticketing modifiers - only used by Travelport.\r\nHolds many items but only interested in the 'Key' -&gt; PNRReference\r\nCommissions is part of ticketing modifiers but held in own class",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRTicketingModifier"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRTicketingModifier"
           }
         },
         "QueueMode": {
@@ -1219,21 +1225,21 @@
           "description": "Gets or sets the service requests.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRServiceRequest"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRServiceRequest"
           }
         },
         "TicketElements": {
           "description": "Gets or sets the ticket elements.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRTicketElement"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRTicketElement"
           }
         },
         "Travellers": {
           "description": "Gets or sets the travellers.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRTraveller"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRTraveller"
           }
         },
         "BookingDateTime": {
@@ -1273,19 +1279,19 @@
           "description": "Gets or sets the action statuses - only used by Travelport.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRActionStatus"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRActionStatus"
           }
         },
         "OtherServiceInformations": {
           "description": "Gets or sets the other service informations - only used by Travelport.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNROtherServiceInformation"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNROtherServiceInformation"
           }
         }
       }
     },
-    "PNRAirInformation": {
+    "Troovo.Integration.GDS.DTO.PNRAirInformation": {
       "description": "Air information from a PNR",
       "type": "object",
       "properties": {
@@ -1293,21 +1299,21 @@
           "description": "Air segments",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRAirSegment"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRAirSegment"
           }
         },
         "AirPricings": {
           "description": "Related air pricing information",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRAirPricing"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRAirPricing"
           }
         },
         "AssociatedRemarks": {
           "description": "Associated remarks",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRAirRemark"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRAirRemark"
           }
         },
         "LocatorCode": {
@@ -1316,7 +1322,7 @@
         }
       }
     },
-    "PNRSupplier": {
+    "Troovo.Integration.GDS.DTO.PNRSupplier": {
       "description": "Supplier from a PNR",
       "type": "object",
       "properties": {
@@ -1337,12 +1343,12 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         }
       }
     },
-    "PNRCarSegment": {
+    "Troovo.Integration.GDS.DTO.PNRCarSegment": {
       "description": "Car segment from a PNR",
       "type": "object",
       "properties": {
@@ -1380,7 +1386,7 @@
           "description": "Rate information",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRRateInfo"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRRateInfo"
           }
         },
         "RateRequiredCharges": {
@@ -1420,7 +1426,7 @@
           "type": "string"
         },
         "ContactInfo": {
-          "$ref": "#/definitions/PNRContactInfo",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRContactInfo",
           "description": "Contact information"
         },
         "FormOfPayment": {
@@ -1435,7 +1441,7 @@
           "description": "General options",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRGeneralOption"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRGeneralOption"
           }
         },
         "Pricing": {
@@ -1443,7 +1449,7 @@
           "type": "string"
         },
         "RelatedFlightInfo": {
-          "$ref": "#/definitions/PNRRelatedFlightInfo",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRRelatedFlightInfo",
           "description": "Related flight information"
         },
         "CompanyCode": {
@@ -1506,19 +1512,19 @@
           }
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "PNR reference details"
         },
         "RelatedReferences": {
           "description": "PNR related reference details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         }
       }
     },
-    "PNRFormOfPayment": {
+    "Troovo.Integration.GDS.DTO.PNRFormOfPayment": {
       "description": "Form of payment from a PNR",
       "type": "object",
       "properties": {
@@ -1538,7 +1544,7 @@
           }
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         },
         "RelatedSegments": {
@@ -1551,7 +1557,7 @@
         }
       }
     },
-    "PNRFreeTextElement": {
+    "Troovo.Integration.GDS.DTO.PNRFreeTextElement": {
       "description": "Free text element from a PNR",
       "type": "object",
       "properties": {
@@ -1571,19 +1577,19 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         },
         "RelatedReferences": {
           "description": "Related references",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         }
       }
     },
-    "PNRGeneralRemark": {
+    "Troovo.Integration.GDS.DTO.PNRGeneralRemark": {
       "description": "General remark from a PNR",
       "type": "object",
       "properties": {
@@ -1604,19 +1610,19 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         },
         "RelatedReferences": {
           "description": "Related references",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         }
       }
     },
-    "PNRHotelSegment": {
+    "Troovo.Integration.GDS.DTO.PNRHotelSegment": {
       "description": "Hotel segment from a PNR",
       "type": "object",
       "properties": {
@@ -1661,7 +1667,7 @@
           "type": "integer"
         },
         "RateInfo": {
-          "$ref": "#/definitions/PNRRateInfo",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRRateInfo",
           "description": "Hotel rate information"
         },
         "RoomType": {
@@ -1682,7 +1688,7 @@
           "type": "string"
         },
         "ContactInfo": {
-          "$ref": "#/definitions/PNRContactInfo",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRContactInfo",
           "description": "Contact information"
         },
         "FormOfPayment": {
@@ -1697,7 +1703,7 @@
           "description": "General options",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRGeneralOption"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRGeneralOption"
           }
         },
         "Pricing": {
@@ -1705,7 +1711,7 @@
           "type": "string"
         },
         "RelatedFlightInfo": {
-          "$ref": "#/definitions/PNRRelatedFlightInfo",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRRelatedFlightInfo",
           "description": "Related flight information"
         },
         "CompanyCode": {
@@ -1768,19 +1774,19 @@
           }
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "PNR reference details"
         },
         "RelatedReferences": {
           "description": "PNR related reference details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         }
       }
     },
-    "PNROtherSegment": {
+    "Troovo.Integration.GDS.DTO.PNROtherSegment": {
       "description": "An unidentified segment from a PNR",
       "type": "object",
       "properties": {
@@ -1807,7 +1813,7 @@
           "type": "string"
         },
         "ContactInfo": {
-          "$ref": "#/definitions/PNRContactInfo",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRContactInfo",
           "description": "Contact information"
         },
         "FormOfPayment": {
@@ -1822,7 +1828,7 @@
           "description": "General options",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRGeneralOption"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRGeneralOption"
           }
         },
         "Pricing": {
@@ -1830,7 +1836,7 @@
           "type": "string"
         },
         "RelatedFlightInfo": {
-          "$ref": "#/definitions/PNRRelatedFlightInfo",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRRelatedFlightInfo",
           "description": "Related flight information"
         },
         "CompanyCode": {
@@ -1893,19 +1899,19 @@
           }
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "PNR reference details"
         },
         "RelatedReferences": {
           "description": "PNR related reference details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         }
       }
     },
-    "PNRRemark": {
+    "Troovo.Integration.GDS.DTO.PNRRemark": {
       "description": "Remark from a PNR",
       "type": "object",
       "properties": {
@@ -1936,7 +1942,7 @@
           "description": "Related references",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         },
         "RemarkType": {
@@ -1945,7 +1951,7 @@
         }
       }
     },
-    "PNRCommission": {
+    "Troovo.Integration.GDS.DTO.PNRCommission": {
       "description": "Commission from a PNR",
       "type": "object",
       "properties": {
@@ -1980,7 +1986,7 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         },
         "Detail": {
@@ -1993,7 +1999,7 @@
         }
       }
     },
-    "PNRTicketingModifier": {
+    "Troovo.Integration.GDS.DTO.PNRTicketingModifier": {
       "description": "Ticketing modifier from a PNR",
       "type": "object",
       "properties": {
@@ -2010,12 +2016,12 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         }
       }
     },
-    "PNRServiceRequest": {
+    "Troovo.Integration.GDS.DTO.PNRServiceRequest": {
       "description": "Service request from a PNR",
       "type": "object",
       "properties": {
@@ -2052,7 +2058,7 @@
           "type": "integer"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         },
         "ServiceRequestType": {
@@ -2079,7 +2085,7 @@
         }
       }
     },
-    "PNRTicketElement": {
+    "Troovo.Integration.GDS.DTO.PNRTicketElement": {
       "description": "Ticket element from a PNR",
       "type": "object",
       "properties": {
@@ -2100,7 +2106,7 @@
           "description": "Fee information",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRFeeInfo"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRFeeInfo"
           }
         },
         "Identifier": {
@@ -2120,14 +2126,14 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         },
         "RelatedReferences": {
           "description": "Related references",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         },
         "RelatedTraveller": {
@@ -2140,7 +2146,7 @@
         }
       }
     },
-    "PNRTraveller": {
+    "Troovo.Integration.GDS.DTO.PNRTraveller": {
       "description": "Traveller from a PNR",
       "type": "object",
       "properties": {
@@ -2170,7 +2176,7 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         },
         "EmailAddresses": {
@@ -2184,12 +2190,12 @@
           "description": "Phone number information",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRTravellerPhone"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRTravellerPhone"
           }
         }
       }
     },
-    "PNRActionStatus": {
+    "Troovo.Integration.GDS.DTO.PNRActionStatus": {
       "description": "Action status from a PNR",
       "type": "object",
       "properties": {
@@ -2256,12 +2262,12 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         }
       }
     },
-    "PNROtherServiceInformation": {
+    "Troovo.Integration.GDS.DTO.PNROtherServiceInformation": {
       "description": "Other service information element from a PNR",
       "type": "object",
       "properties": {
@@ -2308,12 +2314,12 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         }
       }
     },
-    "PNRAirSegment": {
+    "Troovo.Integration.GDS.DTO.PNRAirSegment": {
       "description": "Air segment from a PNR",
       "type": "object",
       "properties": {
@@ -2441,19 +2447,19 @@
           }
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "PNR reference details"
         },
         "RelatedReferences": {
           "description": "PNR related reference details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         }
       }
     },
-    "PNRAirPricing": {
+    "Troovo.Integration.GDS.DTO.PNRAirPricing": {
       "description": "Air pricing from a PNR",
       "type": "object",
       "properties": {
@@ -2501,7 +2507,7 @@
           }
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference details"
         },
         "OtherTattoo": {
@@ -2517,7 +2523,7 @@
           "description": "Related PNR references",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRReference"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference"
           }
         },
         "TotalPrice": {
@@ -2532,14 +2538,14 @@
           "description": "Commission details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRCommission"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRCommission"
           }
         },
         "AccountCodes": {
           "description": "Account codes",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRAccountCode"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRAccountCode"
           }
         },
         "FareBasis": {
@@ -2570,7 +2576,7 @@
         }
       }
     },
-    "PNRAirRemark": {
+    "Troovo.Integration.GDS.DTO.PNRAirRemark": {
       "description": "Air related remark",
       "type": "object",
       "properties": {
@@ -2579,12 +2585,12 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         }
       }
     },
-    "PNRReference": {
+    "Troovo.Integration.GDS.DTO.PNRReference": {
       "description": "Reference from a PNR",
       "type": "object",
       "properties": {
@@ -2598,7 +2604,7 @@
         }
       }
     },
-    "PNRRateInfo": {
+    "Troovo.Integration.GDS.DTO.PNRRateInfo": {
       "description": "Rate information from a PNR",
       "type": "object",
       "properties": {
@@ -2688,12 +2694,12 @@
           "description": "Rate periods",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PNRRatePeriodInfo"
+            "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRRatePeriodInfo"
           }
         }
       }
     },
-    "PNRContactInfo": {
+    "Troovo.Integration.GDS.DTO.PNRContactInfo": {
       "description": "Contact information from a PNR",
       "type": "object",
       "properties": {
@@ -2727,7 +2733,7 @@
         }
       }
     },
-    "PNRGeneralOption": {
+    "Troovo.Integration.GDS.DTO.PNRGeneralOption": {
       "description": "General option from a PNR",
       "type": "object",
       "properties": {
@@ -2744,7 +2750,7 @@
         }
       }
     },
-    "PNRRelatedFlightInfo": {
+    "Troovo.Integration.GDS.DTO.PNRRelatedFlightInfo": {
       "description": "Flight information related to a PNR element",
       "type": "object",
       "properties": {
@@ -2768,7 +2774,7 @@
         }
       }
     },
-    "PNRFeeInfo": {
+    "Troovo.Integration.GDS.DTO.PNRFeeInfo": {
       "description": "Fee information from a PNR",
       "type": "object",
       "properties": {
@@ -2790,7 +2796,7 @@
         }
       }
     },
-    "PNRTravellerPhone": {
+    "Troovo.Integration.GDS.DTO.PNRTravellerPhone": {
       "description": "Phone information of a traveller in a PNR",
       "type": "object",
       "properties": {
@@ -2817,7 +2823,7 @@
         }
       }
     },
-    "PNRAccountCode": {
+    "Troovo.Integration.GDS.DTO.PNRAccountCode": {
       "description": "Account code from a PNR",
       "type": "object",
       "properties": {
@@ -2842,12 +2848,12 @@
           "type": "string"
         },
         "Reference": {
-          "$ref": "#/definitions/PNRReference",
+          "$ref": "#/definitions/Troovo.Integration.GDS.DTO.PNRReference",
           "description": "Reference"
         }
       }
     },
-    "PNRRatePeriodInfo": {
+    "Troovo.Integration.GDS.DTO.PNRRatePeriodInfo": {
       "description": "Rate period information from a PNR",
       "type": "object",
       "properties": {
@@ -2887,14 +2893,14 @@
         }
       }
     },
-    "DeleteResponse": {
+    "Troovo.Reports.DTO.Bookings.DeleteResponse": {
       "description": "Class for Delete Response",
       "type": "object",
       "properties": {
         
       }
     },
-    "BookingList": {
+    "Troovo.Reports.DTO.DashBoardReport.BookingList": {
       "description": "Booking list item",
       "type": "object",
       "properties": {
@@ -2950,7 +2956,7 @@
         }
       }
     },
-    "BookingList_Paged": {
+    "Troovo.Reports.DTO.DashBoardReport.BookingList_Paged": {
       "description": "Paged booking list",
       "type": "object",
       "properties": {
@@ -2963,12 +2969,12 @@
           "description": "List of booking items",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/BookingList"
+            "$ref": "#/definitions/Troovo.Reports.DTO.DashBoardReport.BookingList"
           }
         }
       }
     },
-    "BookingSummary": {
+    "Troovo.Reports.DTO.DashBoardReport.BookingSummary": {
       "description": "Booking summary",
       "type": "object",
       "properties": {
@@ -3015,7 +3021,7 @@
         }
       }
     },
-    "PNR_Status": {
+    "Troovo.Reports.DTO.DashBoardReport.BookingDetail.PNR_Status": {
       "description": "Status of a PNR",
       "type": "object",
       "properties": {
@@ -3082,7 +3088,7 @@
         }
       }
     },
-    "ModuleStatus": {
+    "Troovo.Reports.DTO.DashBoardReport.BookingDetail.ModuleStatus": {
       "description": "Module status",
       "type": "object",
       "properties": {
@@ -3101,7 +3107,7 @@
         }
       }
     },
-    "Result[String]": {
+    "Troovo.v2.Common.Result.Result[System.String]": {
       "description": "A result with the expected web service return value attached.",
       "type": "object",
       "properties": {
@@ -3136,27 +3142,27 @@
         }
       }
     },
-    "LidoTrip": {
+    "Troovo.Reports.DTO.LidoTrip.LidoTrip": {
       "description": "Lido Trip report",
       "type": "object",
       "properties": {
         "postItinerary": {
-          "$ref": "#/definitions/PostItinerary",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PostItinerary",
           "description": "Post itinerary"
         }
       }
     },
-    "PostItinerary": {
+    "Troovo.Reports.DTO.LidoTrip.PostItinerary": {
       "description": "Post itinerary",
       "type": "object",
       "properties": {
         "OTA_TravelItineraryRS": {
-          "$ref": "#/definitions/OTA_TravelItineraryRS",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.OTA_TravelItineraryRS",
           "description": "Itinerary information"
         }
       }
     },
-    "OTA_TravelItineraryRS": {
+    "Troovo.Reports.DTO.LidoTrip.OTA_TravelItineraryRS": {
       "description": "Itinerary information",
       "type": "object",
       "properties": {
@@ -3173,7 +3179,7 @@
           "type": "string"
         },
         "PNRRef": {
-          "$ref": "#/definitions/PNRRef",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PNRRef",
           "description": "PNR reference"
         },
         "Success": {
@@ -3181,12 +3187,12 @@
           "type": "string"
         },
         "TravelItinerary": {
-          "$ref": "#/definitions/TravelItinerary",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.TravelItinerary",
           "description": "Travel itinerary"
         }
       }
     },
-    "PNRRef": {
+    "Troovo.Reports.DTO.LidoTrip.PNRRef": {
       "description": "PNR reference",
       "type": "object",
       "properties": {
@@ -3208,71 +3214,71 @@
         }
       }
     },
-    "TravelItinerary": {
+    "Troovo.Reports.DTO.LidoTrip.TravelItinerary": {
       "description": "Travel itinerary",
       "type": "object",
       "properties": {
         "AccessHistory": {
-          "$ref": "#/definitions/AccessHistory",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.AccessHistory",
           "description": "Access history"
         },
         "AccountProfile": {
-          "$ref": "#/definitions/AccountProfile",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.AccountProfile",
           "description": "Account profile"
         },
         "Customer": {
           "description": "Customer details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PersonName"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PersonName"
           }
         },
         "Booker": {
           "description": "Booker details",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PersonName"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PersonName"
           }
         },
         "ItineraryInfo": {
-          "$ref": "#/definitions/ItineraryInfo",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.ItineraryInfo",
           "description": "Itinerary information"
         },
         "ReferenceList": {
           "description": "References",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Reference"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.Reference"
           }
         },
         "PaymentReferenceList": {
           "description": "Payment references",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/PaymentReference"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PaymentReference"
           }
         }
       }
     },
-    "AccessHistory": {
+    "Troovo.Reports.DTO.LidoTrip.AccessHistory": {
       "description": "Access history",
       "type": "object",
       "properties": {
         "Created": {
-          "$ref": "#/definitions/PNRCreated",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PNRCreated",
           "description": "Created"
         },
         "LastModified": {
-          "$ref": "#/definitions/PNRModified",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PNRModified",
           "description": "Last modified"
         },
         "DataPull": {
-          "$ref": "#/definitions/DataPull",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.DataPull",
           "description": "Data pull"
         }
       }
     },
-    "AccountProfile": {
+    "Troovo.Reports.DTO.LidoTrip.AccountProfile": {
       "description": "Account profile",
       "type": "object",
       "properties": {
@@ -3286,7 +3292,7 @@
         }
       }
     },
-    "PersonName": {
+    "Troovo.Reports.DTO.LidoTrip.PersonName": {
       "description": "Person details",
       "type": "object",
       "properties": {
@@ -3308,7 +3314,7 @@
         }
       }
     },
-    "ItineraryInfo": {
+    "Troovo.Reports.DTO.LidoTrip.ItineraryInfo": {
       "description": "Itinerary information",
       "type": "object",
       "properties": {
@@ -3316,12 +3322,12 @@
           "description": "Itinerary reservation items",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Item"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.Item"
           }
         }
       }
     },
-    "Reference": {
+    "Troovo.Reports.DTO.LidoTrip.Reference": {
       "description": "Reference",
       "type": "object",
       "properties": {
@@ -3339,7 +3345,7 @@
         }
       }
     },
-    "PaymentReference": {
+    "Troovo.Reports.DTO.LidoTrip.PaymentReference": {
       "description": "Payment reference",
       "type": "object",
       "properties": {
@@ -3357,7 +3363,7 @@
         }
       }
     },
-    "PNRCreated": {
+    "Troovo.Reports.DTO.LidoTrip.PNRCreated": {
       "description": "PNR creation details",
       "type": "object",
       "properties": {
@@ -3366,7 +3372,7 @@
           "type": "string"
         },
         "Agent": {
-          "$ref": "#/definitions/Agent",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.Agent",
           "description": "Agent creator"
         },
         "ControlPCC": {
@@ -3383,7 +3389,7 @@
         }
       }
     },
-    "PNRModified": {
+    "Troovo.Reports.DTO.LidoTrip.PNRModified": {
       "description": "PNR modify details",
       "type": "object",
       "properties": {
@@ -3392,12 +3398,12 @@
           "type": "string"
         },
         "Agent": {
-          "$ref": "#/definitions/Agent",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.Agent",
           "description": "Agent responsible for modification"
         }
       }
     },
-    "DataPull": {
+    "Troovo.Reports.DTO.LidoTrip.DataPull": {
       "description": "Data pull",
       "type": "object",
       "properties": {
@@ -3415,17 +3421,17 @@
         }
       }
     },
-    "Item": {
+    "Troovo.Reports.DTO.LidoTrip.Item": {
       "description": "Itinerary reservation item",
       "type": "object",
       "properties": {
         "Hotel": {
-          "$ref": "#/definitions/Hotel",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.Hotel",
           "description": "Hotel details"
         }
       }
     },
-    "Agent": {
+    "Troovo.Reports.DTO.LidoTrip.Agent": {
       "description": "Agent details",
       "type": "object",
       "properties": {
@@ -3439,7 +3445,7 @@
         }
       }
     },
-    "Hotel": {
+    "Troovo.Reports.DTO.LidoTrip.Hotel": {
       "description": "Hotel details",
       "type": "object",
       "properties": {
@@ -3455,30 +3461,30 @@
           "description": "Room types",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RoomType"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.RoomType"
           }
         },
         "RoomRates": {
           "description": "Room rates",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/RoomRate"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.RoomRate"
           }
         },
         "TimeSpan": {
-          "$ref": "#/definitions/TimeSpan",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.TimeSpan",
           "description": "Timespan"
         },
         "HotelReferenceRemark": {
-          "$ref": "#/definitions/HotelReferenceRemark",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.HotelReferenceRemark",
           "description": "Hotel reference remark"
         },
         "HotelCode": {
-          "$ref": "#/definitions/HotelCode",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.HotelCode",
           "description": "Hotel code"
         },
         "HotelLocationInfo": {
-          "$ref": "#/definitions/HotelLocationInfo",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.HotelLocationInfo",
           "description": "Hotel location information"
         },
         "Name": {
@@ -3486,12 +3492,12 @@
           "type": "string"
         },
         "PrimaryAirport": {
-          "$ref": "#/definitions/PrimaryAirport",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PrimaryAirport",
           "description": "Primary airport"
         }
       }
     },
-    "RoomType": {
+    "Troovo.Reports.DTO.LidoTrip.RoomType": {
       "description": "Hotel room type",
       "type": "object",
       "properties": {
@@ -3505,7 +3511,7 @@
         }
       }
     },
-    "RoomRate": {
+    "Troovo.Reports.DTO.LidoTrip.RoomRate": {
       "description": "Hotel room rate",
       "type": "object",
       "properties": {
@@ -3521,12 +3527,12 @@
           "description": "Rate information",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Rate"
+            "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.Rate"
           }
         }
       }
     },
-    "TimeSpan": {
+    "Troovo.Reports.DTO.LidoTrip.TimeSpan": {
       "description": "Timespan",
       "type": "object",
       "properties": {
@@ -3540,17 +3546,17 @@
         }
       }
     },
-    "HotelReferenceRemark": {
+    "Troovo.Reports.DTO.LidoTrip.HotelReferenceRemark": {
       "description": "Hotel reference remark",
       "type": "object",
       "properties": {
         "RateRemarkDetail": {
-          "$ref": "#/definitions/RateRemarkDetail",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.RateRemarkDetail",
           "description": "Rate remark detail"
         }
       }
     },
-    "HotelCode": {
+    "Troovo.Reports.DTO.LidoTrip.HotelCode": {
       "description": "Hotel code",
       "type": "object",
       "properties": {
@@ -3560,7 +3566,7 @@
         }
       }
     },
-    "HotelLocationInfo": {
+    "Troovo.Reports.DTO.LidoTrip.HotelLocationInfo": {
       "description": "Hotel location information",
       "type": "object",
       "properties": {
@@ -3573,16 +3579,16 @@
           "type": "string"
         },
         "PrimaryAirport": {
-          "$ref": "#/definitions/PrimaryAirport",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.PrimaryAirport",
           "description": "Primary airport"
         },
         "Location": {
-          "$ref": "#/definitions/HotelAddress",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.HotelAddress",
           "description": "Location"
         }
       }
     },
-    "PrimaryAirport": {
+    "Troovo.Reports.DTO.LidoTrip.PrimaryAirport": {
       "description": "Primary airport",
       "type": "object",
       "properties": {
@@ -3592,17 +3598,17 @@
         }
       }
     },
-    "Rate": {
+    "Troovo.Reports.DTO.LidoTrip.Rate": {
       "description": "Hotel room rate information",
       "type": "object",
       "properties": {
         "Base": {
-          "$ref": "#/definitions/Base",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.Base",
           "description": "Base rate"
         }
       }
     },
-    "RateRemarkDetail": {
+    "Troovo.Reports.DTO.LidoTrip.RateRemarkDetail": {
       "description": "Rate remark detail",
       "type": "object",
       "properties": {
@@ -3612,7 +3618,7 @@
         }
       }
     },
-    "HotelAddress": {
+    "Troovo.Reports.DTO.LidoTrip.HotelAddress": {
       "description": "Hotel address details",
       "type": "object",
       "properties": {
@@ -3642,7 +3648,7 @@
         }
       }
     },
-    "Base": {
+    "Troovo.Reports.DTO.LidoTrip.Base": {
       "description": "Hotel room base rate information",
       "type": "object",
       "properties": {
@@ -3655,12 +3661,12 @@
           "type": "string"
         },
         "ConvertedRate": {
-          "$ref": "#/definitions/ConvertedRate",
+          "$ref": "#/definitions/Troovo.Reports.DTO.LidoTrip.ConvertedRate",
           "description": "Converted rate"
         }
       }
     },
-    "ConvertedRate": {
+    "Troovo.Reports.DTO.LidoTrip.ConvertedRate": {
       "description": "Hotel room converted rate",
       "type": "object",
       "properties": {
@@ -3678,7 +3684,7 @@
         }
       }
     },
-    "OrbitTransaction": {
+    "Troovo.Reports.DTO.OrbitTransactionReport.OrbitTransaction": {
       "description": "Orbit transaction report",
       "type": "object",
       "properties": {
@@ -3802,6 +3808,455 @@
         },
         "ApproverName": {
           "description": "Approver name",
+          "type": "string"
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TravelReconTrip.TravelReconTrip": {
+      "description": "Travel recon trip report",
+      "type": "object",
+      "properties": {
+        "PNRNumber": {
+          "description": "PNR number",
+          "type": "string"
+        },
+        "GDS": {
+          "description": "GDS source",
+          "type": "string"
+        },
+        "DateTimeCreated": {
+          "format": "date-time",
+          "description": "Date time created",
+          "type": "string"
+        },
+        "DateTimeLastUpdated": {
+          "format": "date-time",
+          "description": "Date time last updated",
+          "type": "string"
+        },
+        "ChangeCounter": {
+          "format": "int32",
+          "description": "Change counter",
+          "type": "integer"
+        },
+        "TMCName": {
+          "description": "TMC name",
+          "type": "string"
+        },
+        "AgentId": {
+          "description": "Agent ID",
+          "type": "string"
+        },
+        "OfficeId": {
+          "description": "Office ID",
+          "type": "string"
+        },
+        "PCC": {
+          "description": "Pseudo-city code",
+          "type": "string"
+        },
+        "CorporateName": {
+          "description": "Corporate name",
+          "type": "string"
+        },
+        "CorporateCode": {
+          "description": "Corporate code",
+          "type": "string"
+        },
+        "Travellers": {
+          "description": "Traveller information",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Troovo.Reports.DTO.TravelReconTrip.Traveller"
+          }
+        },
+        "Segments": {
+          "description": "Segment information",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Troovo.Reports.DTO.TravelReconTrip.Segment"
+          }
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TravelReconTrip.Traveller": {
+      "description": "Traveller information",
+      "type": "object",
+      "properties": {
+        "FirstName": {
+          "description": "First name",
+          "type": "string"
+        },
+        "LastName": {
+          "description": "Last name",
+          "type": "string"
+        },
+        "Email": {
+          "description": "Email address",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Mobile": {
+          "description": "Mobile phone number",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TravelReconTrip.Segment": {
+      "description": "Segment information",
+      "type": "object",
+      "properties": {
+        "SegmentType": {
+          "description": "Segment type",
+          "type": "string"
+        },
+        "SubType": {
+          "description": "Sub-type",
+          "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "description": "Quantity",
+          "type": "integer"
+        },
+        "DateTimeStart": {
+          "format": "date-time",
+          "description": "Start date and time of the segment",
+          "type": "string"
+        },
+        "DateTimeEnd": {
+          "format": "date-time",
+          "description": "End date and time of the segment",
+          "type": "string"
+        },
+        "OriginLocation": {
+          "description": "Origin location",
+          "type": "string"
+        },
+        "OriginCity": {
+          "description": "Origin city",
+          "type": "string"
+        },
+        "OriginCountry": {
+          "description": "Origin country",
+          "type": "string"
+        },
+        "OriginLatitude": {
+          "description": "Origin latitude",
+          "type": "string"
+        },
+        "OriginLongitude": {
+          "description": "Origin longitude",
+          "type": "string"
+        },
+        "DestinationLocation": {
+          "description": "Destination location",
+          "type": "string"
+        },
+        "DestinationCity": {
+          "description": "Destination city",
+          "type": "string"
+        },
+        "DestinationCountry": {
+          "description": "Destination country",
+          "type": "string"
+        },
+        "DestinationLatitude": {
+          "description": "Destination latitude",
+          "type": "string"
+        },
+        "DestinationLongitude": {
+          "description": "Destination longitude",
+          "type": "string"
+        },
+        "SupplierId": {
+          "description": "Supplier ID",
+          "type": "string"
+        },
+        "SupplierName": {
+          "description": "Supplier name",
+          "type": "string"
+        },
+        "ReservationNumber": {
+          "description": "Reservation number",
+          "type": "string"
+        },
+        "FlightCarrier": {
+          "description": "Flight carrier",
+          "type": "string"
+        },
+        "FlightNumber": {
+          "description": "Flight number",
+          "type": "string"
+        },
+        "RowNumber": {
+          "description": "Row number",
+          "type": "string"
+        },
+        "SeatNumber": {
+          "description": "Seat number",
+          "type": "string"
+        },
+        "HotelRoomNumber": {
+          "description": "Hotel room number",
+          "type": "string"
+        },
+        "CruiseIdNo": {
+          "description": "Cruise ID number",
+          "type": "string"
+        },
+        "PortOfCalls": {
+          "description": "Port of call information",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Troovo.Reports.DTO.TravelReconTrip.PortOfCalls"
+          }
+        },
+        "TrainIdNo": {
+          "description": "Train ID number",
+          "type": "string"
+        },
+        "StationLocation": {
+          "description": "Station location",
+          "type": "string"
+        },
+        "StationDateTimeStart": {
+          "description": "Start date and time at the station",
+          "type": "string"
+        },
+        "StationDateTimeEnd": {
+          "description": "End date and time at the station",
+          "type": "string"
+        },
+        "Make": {
+          "description": "Make of the vehicle",
+          "type": "string"
+        },
+        "Model": {
+          "description": "Model of the vehicle",
+          "type": "string"
+        },
+        "Year": {
+          "description": "Year of the vehicle",
+          "type": "string"
+        },
+        "Color": {
+          "description": "Color of the vehicle",
+          "type": "string"
+        },
+        "LicenseNumber": {
+          "description": "License number",
+          "type": "string"
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TravelReconTrip.PortOfCalls": {
+      "description": "Port of call details",
+      "type": "object",
+      "properties": {
+        "PortOfCallLocation": {
+          "description": "Port of call location",
+          "type": "string"
+        },
+        "PortOfCallDateTimeStart": {
+          "format": "date-time",
+          "description": "Start date and time of the port of call",
+          "type": "string"
+        },
+        "PortOfCallDateTimeEnd": {
+          "format": "date-time",
+          "description": "End date and time of the port of call",
+          "type": "string"
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.TroovoTrip": {
+      "description": "Troovo Trip report",
+      "type": "object",
+      "properties": {
+        "OrgData": {
+          "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.OrgData",
+          "description": "Organisation information"
+        },
+        "TravelData": {
+          "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.TravelData",
+          "description": "Travel information"
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.OrgData": {
+      "description": "Organisation information",
+      "type": "object",
+      "properties": {
+        "TMC": {
+          "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.TMC",
+          "description": "Travel management company information"
+        },
+        "Corporate": {
+          "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.Corporate",
+          "description": "Client information"
+        },
+        "Travellers": {
+          "description": "Traveller information",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.Traveller"
+          }
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.TravelData": {
+      "description": "Travel information",
+      "type": "object",
+      "properties": {
+        "PNR": {
+          "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.PNR",
+          "description": "PNR"
+        },
+        "Segments": {
+          "description": "Segment information",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Troovo.Reports.DTO.TroovoTrip.Segment"
+          }
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.TMC": {
+      "description": "Travel management company information",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "TMC name",
+          "type": "string"
+        },
+        "AgentId": {
+          "description": "Agent ID",
+          "type": "string"
+        },
+        "PCC": {
+          "description": "Pseudo-city code",
+          "type": "string"
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.Corporate": {
+      "description": "Client information",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "Client name",
+          "type": "string"
+        },
+        "Code": {
+          "description": "Client code",
+          "type": "string"
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.Traveller": {
+      "description": "Traveller information",
+      "type": "object",
+      "properties": {
+        "GivenName": {
+          "description": "First name",
+          "type": "string"
+        },
+        "FamilyName": {
+          "description": "Last name",
+          "type": "string"
+        },
+        "Emails": {
+          "description": "Email addresses",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Mobiles": {
+          "description": "Mobile phone numbers",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.PNR": {
+      "description": "PNR",
+      "type": "object",
+      "properties": {
+        "Number": {
+          "description": "PNR number",
+          "type": "string"
+        },
+        "GDS": {
+          "description": "GDS source",
+          "type": "string"
+        },
+        "DateTimeCreated": {
+          "format": "date-time",
+          "description": "Created date and time",
+          "type": "string"
+        },
+        "DateTimeLastUpdated": {
+          "format": "date-time",
+          "description": "Last updated date and time",
+          "type": "string"
+        },
+        "ChangeCounter": {
+          "format": "int32",
+          "description": "Change counter",
+          "type": "integer"
+        }
+      }
+    },
+    "Troovo.Reports.DTO.TroovoTrip.Segment": {
+      "description": "Segment information",
+      "type": "object",
+      "properties": {
+        "Type": {
+          "description": "Segment type",
+          "type": "string"
+        },
+        "SubType": {
+          "description": "Segment sub-type",
+          "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "description": "Quantity",
+          "type": "integer"
+        },
+        "DateTimeStart": {
+          "format": "date-time",
+          "description": "Segment start date and time",
+          "type": "string"
+        },
+        "DateTimeEnd": {
+          "format": "date-time",
+          "description": "Segment end date and time",
+          "type": "string"
+        },
+        "OriginLocation": {
+          "description": "Origin location",
+          "type": "string"
+        },
+        "DestinationLocation": {
+          "description": "Destination location",
+          "type": "string"
+        },
+        "SupplierId": {
+          "description": "Supplier ID",
+          "type": "string"
+        },
+        "SupplierName": {
+          "description": "Supplier name",
           "type": "string"
         }
       }
