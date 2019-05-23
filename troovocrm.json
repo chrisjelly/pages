@@ -1,0 +1,1304 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Troovo.API.CRM"
+  },
+  "host": "localhost",
+  "basePath": "/crm",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/1.0/CustomProperty": {
+      "post": {
+        "tags": [
+          "CustomProperty"
+        ],
+        "summary": "Creates a property defintion in database and an associated Extension Property in Azure. \r\n\r\nThis API will use Active Directory Azure Library to register extension property with the multitenant app. Any organisation(s) that have consented to use this app will have this property\r\nadded to the Azure Active Directory automatically.\r\n\r\nName, Type, Security and Data Type are required fields. Valid values are:\r\n- Type: 'User' and 'Group'\r\n- Security: 'None', 'Encryption' and 'Hash'\r\n- Data Type: 'String', 'Integer', 'Boolean', 'DateTime' and 'Binary'",
+        "operationId": "CustomProperty_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "property",
+            "in": "body",
+            "description": "Property to create",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CustomProperty"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Property was successfully created.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "409": {
+            "description": "Property could not be created since a property with this name already exists."
+          },
+          "500": {
+            "description": "Property could not be created due to internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/CustomProperty/{id}": {
+      "delete": {
+        "tags": [
+          "CustomProperty"
+        ],
+        "summary": "Deletes property definition with the {id} from the database and deletes the associated Extension Property from Azure. \r\n\r\nTechnically, this API will call Graph API to unregister the Extension Property with {id} from the multitenant app. Any organisation that had consented to use this app\r\nwill have this property removed from their account as well. Any object that had values for this extension property will have their value removed.",
+        "operationId": "CustomProperty_Delete",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Property to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Property was successfully deleted.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "404": {
+            "description": "No property exists with {id}"
+          },
+          "500": {
+            "description": "Property could not be deleted due to internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/Data": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Exports all data from the clients account into CSV file. At this point in time only Users and Groups can be exported.",
+        "operationId": "Data_Get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Type of data to export. Valid values are 'User' and 'Group'",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              0,
+              1
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Export was completed.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "Export failed due to an internal server error."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Imports Excel spreadsheet. Currently only Client Users and Customer Users tabs are imported. \r\n        \r\nImports tabs into internal database and Azure Active Directory. \r\n\r\nTo import Users following fields are required:\r\n- LoginName\r\n- Password\r\n- MailNickname\r\n- FirstName or LastName are required. Azure Active Directory requires DisplayName which is generally 'FirstName LastName'. \r\n\r\nIt is recommended to provide values for these fields for Users tab(s):\r\n- DisplayName. Although this is a required field if the import table doesn't contain a value importer will default to 'FirstName LastName'.\r\n- UserType. This is different from Role. Role is an internal user role whereas UserType is how the user will be defined in Active Directory. Valid values are 'Member' and 'Guest'. If import table doesn't contain a value\r\nimporter will default value for this field to 'Member'.\r\n            \r\nNote: At the moment users are added to database and Azure Active Directory one by one, if performance becomes an issue insertions can be batched up.",
+        "operationId": "Data_Post",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Import was completed but some rows could not be imported.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "204": {
+            "description": "Import was successfully completed and all rows were imported without any errors",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "Import failed due to an internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/Group": {
+      "put": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Updates Group details in internal system and Azure. In the internal system only Name is updated and in Azure only Name and Description are updated.\r\n\r\nGroup Id is a required field",
+        "operationId": "Group_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "group",
+            "in": "body",
+            "description": "Group to update",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Group"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Group was successfully updated.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "404": {
+            "description": "Group could not be updated since a Group with this Id does not exist."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Creates a Group in internal database and Azure Active Directory. If Members contains any elements than users are assigned to this newly created group\r\n\r\nFollowing are the required fields:\r\n-   Name\r\n-   MailNickname",
+        "operationId": "Group_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "group",
+            "in": "body",
+            "description": "Group to create",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Group"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Group was sucessfully created",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "User could not be created due to internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/Group/{id}": {
+      "get": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Returns Group with {id}.",
+        "operationId": "Group_Get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Group was successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Group"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "404": {
+            "description": "No Group exists with this Id."
+          },
+          "500": {
+            "description": "Group could not be retrieved due to an internal server error."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Deactivates a group in the database. No change is made in Active Directory.",
+        "operationId": "Group_Delete",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Group to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Group was successfully deleted.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "404": {
+            "description": "Group could not be deleted since a Group with this Id does not exist."
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Reactivates a previously deactivated group. No change is made in Active Directory",
+        "operationId": "Group_Undelete",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Group being reactivated",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Group was successfully deleted.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "404": {
+            "description": "Group could not be deleted since a Group with this Id does not exist."
+          }
+        }
+      }
+    },
+    "/api/1.0/Group/Paged": {
+      "get": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Gets paged list of groups. Paging and sorting is based on internal database.",
+        "operationId": "Group_GetGroups",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of groups to return",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of paged Groups was successfully retrieved.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Group"
+              }
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          }
+        }
+      }
+    },
+    "/api/1.0/GroupUser": {
+      "post": {
+        "tags": [
+          "GroupUser"
+        ],
+        "summary": "Assigns users to group with {groupUser}",
+        "operationId": "GroupUser_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "groupUser",
+            "in": "body",
+            "description": "Group",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GroupUser"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Uses were successfully assigned to the Group.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "Users could not be assigned due to internal server error."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GroupUser"
+        ],
+        "summary": "Removes users from the group. If all users were succesfully from the group then 204 status will be returned otherwise 200 will be returned along with Ids of users that could not be removed from the group",
+        "operationId": "GroupUser_Delete",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "groupUser",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GroupUser"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Some users could not be removed from the group",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "204": {
+            "description": "All users were successfully from the Group.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "Users could not be assigned due to internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/GroupUser/{groupId}": {
+      "get": {
+        "tags": [
+          "GroupUser"
+        ],
+        "summary": "API method to retrieve list of users who are members of the requested group",
+        "operationId": "GroupUser_Get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Object Id of the group in Azure Active Directory",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/User": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Updates user details",
+        "operationId": "User_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User to be updated",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "User was successfully updated.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "User could not be updated due to internal server error."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Creates a user in the system. \r\n\r\nFollowing are the required fields:\r\n-   Username. This value must be unique.\r\n-   Firstname.\r\n-   Lastname.\r\n-   ClientId. This value must be a valid identifier of a client in the system.\r\n-   UserType\r\n-   Department\r\n\r\nWhilst Emailaddress is not required it should be provided if contact email is different from username.",
+        "operationId": "User_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Details of the user to be created in the system",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User was sucessfully created",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "409": {
+            "description": "User could not be created because a user with this username already exists"
+          },
+          "500": {
+            "description": "User could not be created due to internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/User/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Gets the user with {id}",
+        "operationId": "User_Get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User to retrieve",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User was successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "404": {
+            "description": "No User exists with this Id."
+          },
+          "500": {
+            "description": "User could not be retrieved due to internal server error."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Soft deletes/deactivates the user with {id}. Azure Active Directory user account is not changed by this method.",
+        "operationId": "User_Delete",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User to delete",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "User was successfully deleted.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "User could not be deleted due to internal server error."
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Reactivated a user in our system with the {id}. Note: this does not change Azure Active Directory.If the user has been disbaled in Active Directory then they will need to be renabled in Azure Active Directory using a different method.",
+        "operationId": "User_Undelete",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User to undelete",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "User was successfully undeleted.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "User could not be deleted due to an internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/User/Me": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Gets details of logged in user",
+        "operationId": "User_Get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "User was successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "401": {
+            "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "500": {
+            "description": "User could not be retrieved due to internal server error."
+          }
+        }
+      }
+    },
+    "/api/1.0/User/IsAdmin": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Checks whether the currently logged in user has been assigned User Account Administrator role in Azure Active Directory. If the user has been assigned this role then this method will return 200 OK but if the user not been assigned this\r\nrole then this method will return 403 Forbidden",
+        "operationId": "User_IsUserAdmin",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/User/ForgotUsername": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Forgots the username.",
+        "operationId": "User_ForgotUsername",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "The email.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/User/Paged": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Gets paged list of users. Paging and sorting is based on internal database.",
+        "operationId": "User_GetUsers",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of users to return",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/User/Usernames": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Get a list of KeyValuePairs of all the active users that exist in the client of logged in user. Key is username and value is external Id (Object Id of the user in Active Directory).",
+        "operationId": "User_GetUsernamesList",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/User/Admin": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Makes the current logged in user admin and stores the password",
+        "operationId": "User_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User details",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AdminUser"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/1.0/User/CustomProperty": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Updates custom property of the logged in user. \r\n\r\nNote: Logged in user must have admin rights.",
+        "operationId": "User_UpdateCustomProperty",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "property",
+            "in": "body",
+            "description": "Custom property",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CustomPropertyUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CustomProperty": {
+      "description": "Custom Property class",
+      "required": [
+        "Name",
+        "Type",
+        "Security",
+        "DataType"
+      ],
+      "type": "object",
+      "properties": {
+        "CustomPropertyId": {
+          "format": "int32",
+          "description": "Gets or sets the custom property identifier.",
+          "type": "integer"
+        },
+        "Name": {
+          "description": "Gets or sets the name.",
+          "type": "string"
+        },
+        "Type": {
+          "description": "Gets or sets the type.",
+          "type": "string"
+        },
+        "Security": {
+          "description": "Gets or sets the security.",
+          "type": "string"
+        },
+        "DataType": {
+          "description": "Gets or sets the type of the data.",
+          "type": "string"
+        }
+      }
+    },
+    "Group": {
+      "required": [
+        "Name",
+        "MailNickname"
+      ],
+      "type": "object",
+      "properties": {
+        "GroupId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Name": {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "ExternalId": {
+          "type": "string"
+        },
+        "ClientId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "MailNickname": {
+          "maxLength": 2147483647,
+          "minLength": 1,
+          "type": "string"
+        },
+        "Members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/User"
+          }
+        },
+        "CustomProperties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KeyValuePair[String,Object]"
+          }
+        },
+        "IsActive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "User": {
+      "required": [
+        "UserName",
+        "FirstName",
+        "LastName",
+        "ClientId",
+        "UserType",
+        "Department"
+      ],
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "UserName": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "ClientId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Manager": {
+          "type": "string"
+        },
+        "DisplayName": {
+          "type": "string"
+        },
+        "UserType": {
+          "type": "string"
+        },
+        "CompanyName": {
+          "type": "string"
+        },
+        "Department": {
+          "type": "string"
+        },
+        "JobTitle": {
+          "type": "string"
+        },
+        "Mobile": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        },
+        "MailNickname": {
+          "type": "string"
+        },
+        "Phone": {
+          "type": "string"
+        },
+        "CustomProperties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KeyValuePair[String,Object]"
+          }
+        },
+        "State": {
+          "type": "string"
+        },
+        "StreetAddress": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "PostalCode": {
+          "type": "string"
+        },
+        "Country": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        },
+        "TimeZone": {
+          "type": "string"
+        },
+        "ExternalId": {
+          "type": "string"
+        }
+      }
+    },
+    "KeyValuePair[String,Object]": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "object"
+        }
+      }
+    },
+    "GroupUser": {
+      "description": "group User class",
+      "required": [
+        "GroupId",
+        "UserIds"
+      ],
+      "type": "object",
+      "properties": {
+        "GroupId": {
+          "format": "int32",
+          "description": "Gets or sets the group identifier.",
+          "type": "integer"
+        },
+        "UserIds": {
+          "description": "Gets or sets the user ids.",
+          "type": "array",
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "AdminUser": {
+      "description": "Admin User class",
+      "type": "object",
+      "properties": {
+        "Password": {
+          "description": "Gets or sets the password.",
+          "type": "string"
+        }
+      }
+    },
+    "CustomPropertyUpdate": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "Gets or sets the name.",
+          "type": "string"
+        },
+        "Value": {
+          "description": "Gets or sets the value.",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "description": "API Key Authentication",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}
