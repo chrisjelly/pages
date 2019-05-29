@@ -2682,6 +2682,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientConfiguration_GDSEndpoint"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -2710,6 +2716,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientConfiguration_GDSEndpoint"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -2738,6 +2750,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientConfiguration_GDSEndpoint"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -2773,6 +2791,15 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientConfiguration_GDSEndpoint"
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -2806,6 +2833,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientConfiguration_GDSEndpoint"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -2836,6 +2869,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientModule"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -2864,6 +2900,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientModule"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -2892,6 +2931,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientModule"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -2915,6 +2957,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientModule_Ex"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -2948,6 +2993,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientModule"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -2981,6 +3029,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientModule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -3004,6 +3058,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientModule_Ex"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -24041,88 +24098,111 @@
       }
     },
     "Troovo.Business.DTO.Core.AgencyClientModule": {
+      "description": "Module for an agency client pair",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Database ID of the related client",
           "type": "integer"
         },
         "ModuleId": {
           "format": "int32",
+          "description": "Database ID of the related module",
           "type": "integer"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the module validity",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the module validity",
           "type": "string"
         },
         "RunOrder": {
           "format": "int32",
+          "description": "Run order",
           "type": "integer"
         },
         "Enabled": {
+          "description": "Is the module enabled?",
           "type": "boolean"
         },
         "AgencyClientModuleId": {
           "format": "int32",
+          "description": "Database ID of the agency client module",
           "type": "integer"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyClientModule_Ex": {
+      "description": "Module for an agency client pair",
       "type": "object",
       "properties": {
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ModuleName": {
+          "description": "Module name",
           "type": "string"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Database ID of the related client",
           "type": "integer"
         },
         "ModuleId": {
           "format": "int32",
+          "description": "Database ID of the related module",
           "type": "integer"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the module validity",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the module validity",
           "type": "string"
         },
         "RunOrder": {
           "format": "int32",
+          "description": "Run order",
           "type": "integer"
         },
         "Enabled": {
+          "description": "Is the module enabled?",
           "type": "boolean"
         },
         "AgencyClientModuleId": {
           "format": "int32",
+          "description": "Database ID of the agency client module",
           "type": "integer"
         }
       }
