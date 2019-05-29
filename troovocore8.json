@@ -73,6 +73,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AccountCodeResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -106,6 +109,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AccountCode"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -139,6 +148,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AccountCode"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -169,6 +184,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AccountCode"
             }
+          },
+          "404": {
+            "description": "NotFound"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -197,6 +218,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AccountCode"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -225,6 +252,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AccountCode"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -21943,85 +21976,109 @@
       }
     },
     "Troovo.Business.DTO.Core.AccountCodeResult": {
+      "description": "Account code result",
       "type": "object",
       "properties": {
         "AccountCodeId": {
           "format": "int32",
+          "description": "Account code ID",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Agency ID",
           "type": "integer"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "Code": {
+          "description": "Code",
           "type": "string"
         },
         "Description": {
+          "description": "Description",
           "type": "string"
         },
         "AccountCodeTypeId": {
           "format": "int32",
+          "description": "Account code type ID",
           "type": "integer"
         },
         "AccountCodeType": {
+          "description": "Account code type",
           "type": "string"
         },
         "VendorCode": {
+          "description": "Vendor code",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the account code active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AccountCode": {
+      "description": "Account code",
       "type": "object",
       "properties": {
         "AccountCodeId": {
           "format": "int32",
+          "description": "The Account Code ID from the database",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Agency ID",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "Code": {
+          "description": "Code",
           "type": "string"
         },
         "Description": {
+          "description": "Description",
           "type": "string"
         },
         "AccountCodeTypeId": {
           "format": "int32",
+          "description": "Account code type ID",
           "type": "integer"
         },
         "AccountCodeType": {
+          "description": "Account code type",
           "type": "string"
         },
         "VendorCode": {
+          "description": "Vendor code",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the account code active?",
           "type": "boolean"
         }
       }
