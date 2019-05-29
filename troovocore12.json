@@ -500,6 +500,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -533,6 +536,15 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.Agency"
             }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -566,6 +578,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.Agency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -596,6 +611,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.Agency"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -624,6 +645,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.Agency"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -652,6 +679,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.Agency"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -670,6 +703,7 @@
           {
             "name": "agencyId",
             "in": "path",
+            "description": "The agency id.",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -684,6 +718,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommissionResult"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -717,6 +757,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFeeResult"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -750,6 +796,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.ClientResult"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -783,6 +835,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.ClientResult"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -816,6 +874,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AccountCodeResult"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -849,6 +913,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.CostCentreResult"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -882,6 +952,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.Consultant"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -915,6 +991,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.Branch"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -948,6 +1030,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.PNRCustomDataResult"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -981,6 +1069,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.PseudoCityCode"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1014,6 +1108,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.PseudoCityCodeQueue"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1047,6 +1147,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1085,6 +1191,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1118,6 +1230,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyClientConfiguration"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1156,6 +1274,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyReport"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1192,6 +1316,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyReport"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1228,6 +1358,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyReport"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1258,6 +1394,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyApplication"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1281,6 +1420,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyApplicationResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1314,6 +1456,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyApplication"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1347,6 +1495,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyApplication"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1370,6 +1521,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyApplicationResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1408,6 +1562,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyApplication"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1444,6 +1601,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyApplication"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1474,6 +1634,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyBenchmark"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1502,6 +1668,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyBenchmark"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1530,6 +1702,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyBenchmark"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1553,6 +1731,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyBenchmark_Ex"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1586,6 +1767,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyBenchmark"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1619,6 +1806,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyBenchmark"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1652,6 +1845,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.BenchmarkCarrier"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1690,6 +1889,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.BenchmarkCarrier"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -1726,6 +1931,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.BenchmarkCarrier"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -1744,17 +1955,26 @@
           "200": {
             "description": "Import was completed but some rows could not be imported.",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
             "description": "Import was successfully completed and all rows were imported without any errors",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "415": {
+            "description": "Unsupported media type."
           },
           "500": {
             "description": "Import failed due to an internal server error."
@@ -22103,984 +22323,1264 @@
       }
     },
     "Troovo.Business.DTO.Core.AgencyResult": {
+      "description": "Agency information",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the agency",
           "type": "integer"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "StreetAddress": {
+          "description": "Street address",
           "type": "string"
         },
         "Suburb": {
+          "description": "Suburb",
           "type": "string"
         },
         "Postcode": {
+          "description": "Postcode",
           "type": "string"
         },
         "State": {
+          "description": "State",
           "type": "string"
         },
         "Country": {
+          "description": "Country",
           "type": "string"
         },
         "PNRDataPrepId": {
           "format": "int32",
+          "description": "Database ID of the associated PNR data prep",
           "type": "integer"
         },
         "PNRDataPrepName": {
+          "description": "Name of the associated PNR data prep",
           "type": "string"
         },
         "CountryId": {
           "format": "int32",
+          "description": "Country ID",
           "type": "integer"
         },
         "CountryCode": {
+          "description": "Country code",
           "type": "string"
         },
         "CountryName": {
+          "description": "Country name",
           "type": "string"
         },
         "IATANumber": {
+          "description": "IATA number",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.Agency": {
+      "description": "Agency information",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the agency",
           "type": "integer"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "MasterCode": {
+          "description": "Master code",
           "type": "string"
         },
         "StreetAddress": {
+          "description": "Street address",
           "type": "string"
         },
         "Suburb": {
+          "description": "Suburb",
           "type": "string"
         },
         "Postcode": {
           "format": "int32",
+          "description": "Postcode",
           "type": "integer"
         },
         "State": {
+          "description": "State",
           "type": "string"
         },
         "Country": {
+          "description": "Country",
           "type": "string"
         },
         "PNRDataPrepId": {
           "format": "int32",
+          "description": "Database ID of the associated PNR data prep",
           "type": "integer"
         },
         "CountryId": {
           "format": "int32",
+          "description": "Country ID",
           "type": "integer"
         },
         "IATANumber": {
+          "description": "IATA number",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyCommissionResult": {
+      "description": "Agency commission information",
       "type": "object",
       "properties": {
         "AgencyCommissionId": {
           "format": "int32",
+          "description": "Database ID of the agency commission",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "PointOfSaleCountryId": {
           "format": "int32",
+          "description": "Point of sale country ID",
           "type": "integer"
         },
         "PointOfSaleCountryCode": {
+          "description": "Point of sale country code",
           "type": "string"
         },
         "PointOfSaleCountryName": {
+          "description": "Point of sale country name",
           "type": "string"
         },
         "OriginZoneId": {
           "format": "int32",
+          "description": "Origin zone ID",
           "type": "integer"
         },
         "OriginZoneName": {
+          "description": "Origin zone name",
           "type": "string"
         },
         "DestinationZoneId": {
           "format": "int32",
+          "description": "Destination zone ID",
           "type": "integer"
         },
         "DestinationZoneName": {
+          "description": "Destination zone name",
           "type": "string"
         },
         "ServiceClass": {
+          "description": "Service class",
           "type": "string"
         },
         "Cabin": {
+          "description": "Cabin",
           "type": "string"
         },
         "Carrier": {
+          "description": "Carrier",
           "type": "string"
         },
         "TripTypeId": {
           "format": "int32",
+          "description": "Trip type ID",
           "type": "integer"
         },
         "TripTypeCode": {
+          "description": "Trip type code",
           "type": "string"
         },
         "CommissionPercentage": {
           "format": "double",
+          "description": "Commission percentage",
           "type": "number"
         },
         "CommissionPriceId": {
           "format": "int32",
+          "description": "Commission price ID",
           "type": "integer"
         },
         "CommissionPrice": {
           "format": "double",
+          "description": "Commission price",
           "type": "number"
         },
         "CommissionPriceTax": {
           "format": "double",
+          "description": "Commission price tax",
           "type": "number"
         },
         "CommissionPriceCurrencyID": {
           "format": "int32",
+          "description": "Commission price currency ID",
           "type": "integer"
         },
         "CommissionPriceCurrencyCode": {
+          "description": "Commission price currency code",
           "type": "string"
         },
         "CommissionPriceCurrencyName": {
+          "description": "Commission price currency name",
           "type": "string"
         },
         "CappedPriceId": {
           "format": "int32",
+          "description": "Capped price ID",
           "type": "integer"
         },
         "CappedPrice": {
           "format": "double",
+          "description": "Capped price",
           "type": "number"
         },
         "CappedPriceTax": {
           "format": "double",
+          "description": "Capped price tax",
           "type": "number"
         },
         "CappedPriceCurrencyID": {
           "format": "int32",
+          "description": "Capped price currency ID",
           "type": "integer"
         },
         "CappedPriceCurrencyCode": {
+          "description": "Capped price currency code",
           "type": "string"
         },
         "CappedPriceCurrencyName": {
+          "description": "Capped price currency name",
           "type": "string"
         },
         "TravelIndicatorId": {
           "format": "int32",
+          "description": "Travel indicator ID",
           "type": "integer"
         },
         "TravelIndicatorCode": {
+          "description": "Travel indicator code",
           "type": "string"
         },
         "TravelIndicatorDescription": {
+          "description": "Travel indicator description",
           "type": "string"
         },
         "FareBasisId": {
           "format": "int32",
+          "description": "Fare basis ID",
           "type": "integer"
         },
         "FareBasisCode": {
+          "description": "Fare basis code",
           "type": "string"
         },
         "FareBasisDescription": {
+          "description": "Fare basis description",
           "type": "string"
         },
         "TourCodeId": {
           "format": "int32",
+          "description": "Tour code ID",
           "type": "integer"
         },
         "TourCode": {
+          "description": "Tour code",
           "type": "string"
         },
         "TourCodeDescription": {
+          "description": "Tour code description",
           "type": "string"
         },
         "CodeShareId": {
           "format": "int32",
+          "description": "Code share ID",
           "type": "integer"
         },
         "CodeShareValue": {
+          "description": "Code share value",
           "type": "string"
         },
         "CodeShareDescription": {
+          "description": "Code share description",
           "type": "string"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "ValidFrom": {
           "format": "date-time",
+          "description": "Valid from date",
           "type": "string"
         },
         "ValidTo": {
           "format": "date-time",
+          "description": "Valid to date",
           "type": "string"
         },
         "PrivateFareID": {
           "format": "int32",
+          "description": "Private fare ID",
           "type": "integer"
         },
         "PrivateFareCode": {
+          "description": "Private fare code",
           "type": "string"
         },
         "PrivateFareDescription": {
+          "description": "Private fare description",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency commission active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyFeeResult": {
+      "description": "Agency fee information",
       "type": "object",
       "properties": {
         "AgencyFeeId": {
           "format": "int32",
+          "description": "Database ID of the agency fee",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "FeeCodeId": {
           "format": "int32",
+          "description": "Fee code ID",
           "type": "integer"
         },
         "FeeCode": {
+          "description": "Fee code",
           "type": "string"
         },
         "Description": {
+          "description": "Description",
           "type": "string"
         },
         "ExGST": {
           "format": "double",
+          "description": "Ex GST",
           "type": "number"
         },
         "GST": {
           "format": "double",
+          "description": "GST",
           "type": "number"
         },
         "CurrencyId": {
           "format": "int32",
+          "description": "Currency ID",
           "type": "integer"
         },
         "CurrencyCode": {
+          "description": "Currency code",
           "type": "string"
         },
         "CurrencyName": {
+          "description": "Currency name",
           "type": "string"
         },
         "IncludesMerchantFee": {
+          "description": "Includes merchant fee",
           "type": "boolean"
         },
         "IsActive": {
+          "description": "Is the agency fee active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.ClientResult": {
+      "description": "Client information",
       "type": "object",
       "properties": {
         "ClientId": {
           "format": "int32",
+          "description": "Database ID of the client",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "BranchId": {
           "format": "int32",
+          "description": "Branch ID",
           "type": "integer"
         },
         "BranchCode": {
+          "description": "Branch code",
           "type": "string"
         },
         "BranchName": {
+          "description": "Branch name",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientEmail": {
+          "description": "Client email",
           "type": "string"
         },
         "TenantId": {
+          "description": "Tenant ID",
           "type": "string"
         },
         "ConsoleAppId": {
+          "description": "Console app ID",
           "type": "string"
         },
         "UsernameDomain": {
+          "description": "Username domain",
           "type": "string"
         },
         "FeeTemplateId": {
           "format": "int32",
+          "description": "Fee template ID",
           "type": "integer"
         },
         "FeeTemplateName": {
+          "description": "Fee template name",
           "type": "string"
         },
         "IsActiveDirectorySynced": {
+          "description": "Is active directory synced?",
           "type": "boolean"
         },
         "AdminUserId": {
           "format": "int32",
+          "description": "Admin user ID",
           "type": "integer"
         },
         "AdminUserName": {
+          "description": "Admin username",
           "type": "string"
         },
         "AdminPassword": {
+          "description": "Admin password",
           "type": "string"
         },
         "AdminKS": {
+          "description": "Admin key secret pair",
           "type": "string"
         },
         "UseAllTicketsOnPnr": {
+          "description": "Use all tickets on PNR?",
           "type": "boolean"
         },
         "IsActive": {
+          "description": "Is the client active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.CostCentreResult": {
+      "description": "Cost centre information",
       "type": "object",
       "properties": {
         "CostCentreId": {
           "format": "int32",
+          "description": "Database ID of the cost centre",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "CostCentreCode": {
+          "description": "Cost centre code",
           "type": "string"
         },
         "CostCentreName": {
+          "description": "Cost centre name",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the cost centre active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.Consultant": {
+      "description": "Consultant information",
       "type": "object",
       "properties": {
         "ConsultantId": {
           "format": "int32",
+          "description": "The Consultant ID from the database",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "PCC": {
+          "description": "Pseudo-city code",
           "type": "string"
         },
         "GdsUsername": {
+          "description": "GDS username",
           "type": "string"
         },
         "Email": {
+          "description": "Email",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the consultant active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.Branch": {
+      "description": "Branch information",
       "type": "object",
       "properties": {
         "BranchId": {
           "format": "int32",
+          "description": "The Branch ID from the database",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "BranchCode": {
+          "description": "Branch code",
           "type": "string"
         },
         "BranchName": {
+          "description": "Branch name",
           "type": "string"
         },
         "StreetAddress": {
+          "description": "Street address",
           "type": "string"
         },
         "Suburb": {
+          "description": "Suburb",
           "type": "string"
         },
         "Postcode": {
+          "description": "Postcode",
           "type": "string"
         },
         "State": {
+          "description": "State",
           "type": "string"
         },
         "Country": {
+          "description": "Country",
           "type": "string"
         },
         "BranchTelephone": {
+          "description": "Branch telephone",
           "type": "string"
         },
         "BranchFax": {
+          "description": "Branch fax",
           "type": "string"
         },
         "BranchEmail": {
+          "description": "Branch email",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the branch active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.PNRCustomDataResult": {
+      "description": "PNR custom data information",
       "type": "object",
       "properties": {
         "PNRCustomDataId": {
           "format": "int32",
+          "description": "Database ID of the PNR custom data",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "Name": {
+          "description": "Name",
           "type": "string"
         },
         "Pattern": {
+          "description": "Pattern",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the PNR custom data active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.PseudoCityCode": {
+      "description": "Pseudo-city code",
       "type": "object",
       "properties": {
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Database ID of the pseudo-city code",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "BookingSystemConnectionId": {
           "format": "int32",
+          "description": "Database ID of the related booking system connection",
           "type": "integer"
         },
         "PCC": {
+          "description": "Pseudo-city code value",
           "type": "string"
         },
         "Description": {
+          "description": "Description",
           "type": "string"
         },
         "DesignatePrinter": {
+          "description": "Designate printer",
           "type": "string"
         },
         "PrinterHardCopy": {
+          "description": "Printer hard copy",
           "type": "boolean"
         },
         "IsActive": {
+          "description": "Is the pseudo-city code active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.PseudoCityCodeQueue": {
+      "description": "Pseudo-city code queue informatino",
       "type": "object",
       "properties": {
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Database ID of the related pseudo-city code",
           "type": "integer"
         },
         "QueueId": {
           "format": "int32",
+          "description": "Database ID of the related queue",
           "type": "integer"
         },
         "QueueNo": {
           "format": "int32",
+          "description": "Queue number",
           "type": "integer"
         },
         "QueueCategory": {
+          "description": "Queue category",
           "type": "string"
         },
         "Enabled": {
+          "description": "Is the queue enabled?",
           "type": "boolean"
         },
         "EnableAutoRemove": {
+          "description": "Enable auto-remove for the queue",
           "type": "boolean"
         },
         "IsActive": {
+          "description": "Is the pseudo-city code queue active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyRemarkType": {
+      "description": "Agency remark type",
       "type": "object",
       "properties": {
         "AgencyRemarkTypeId": {
           "format": "int32",
+          "description": "Database ID of the agency remark type",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "RemarkTypeId": {
           "format": "int32",
+          "description": "Database ID of the related remark type",
           "type": "integer"
         },
         "RemarkFormat": {
+          "description": "Remark format",
           "type": "string"
         },
         "AmadeusCategory": {
+          "description": "Amadeus category",
           "type": "string"
         },
         "SabreType": {
+          "description": "Sabre type",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency remark type active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyClientConfiguration": {
+      "description": "Agency client configuration",
       "type": "object",
       "properties": {
         "AgencyClientConfigurationId": {
           "format": "int32",
+          "description": "Database ID of the agency client configuration",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Database ID of the related client",
           "type": "integer"
         },
         "GDSSourceId": {
           "format": "int32",
+          "description": "GDS source ID",
           "type": "integer"
         },
         "Endpoint": {
+          "description": "Endpoint",
           "type": "string"
         },
         "Username": {
+          "description": "Username",
           "type": "string"
         },
         "Password": {
+          "description": "Password",
           "type": "string"
         },
         "PseudoCityCode": {
+          "description": "Pseudo-city code",
           "type": "string"
         },
         "TargetBranch": {
+          "description": "Target branch",
           "type": "string"
         },
         "ServiceProvider": {
+          "description": "Service provider",
           "type": "string"
         },
         "HostAccessProfile": {
+          "description": "Host access profile",
           "type": "string"
         },
         "WSAP": {
+          "description": "WSAP (Amadeus)",
           "type": "string"
         },
         "AgentDutyCode": {
+          "description": "Agent duty code",
           "type": "string"
         },
         "HotelEndpoint": {
+          "description": "Hotel endpoint (Amadeus)",
           "type": "string"
         },
         "PostBookingQueueNum": {
           "format": "int32",
+          "description": "Post-booking queue number",
           "type": "integer"
         },
         "RunEngine": {
+          "description": "Run the engine?",
           "type": "boolean"
         },
         "ReadFromQueueNum": {
           "format": "int32",
+          "description": "Read from queue number",
           "type": "integer"
         },
         "enableHotel": {
+          "description": "Enable hotel?",
           "type": "boolean"
         },
         "PostBookingQueueCategory": {
+          "description": "Post-booking queue category",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the configuration active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyReport": {
+      "description": "Agency report",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ReportId": {
           "format": "int32",
+          "description": "Database ID of the related report",
           "type": "integer"
         },
         "OutputFormatId": {
           "format": "int32",
+          "description": "Output foramt ID",
           "type": "integer"
         },
         "ExportTypeId": {
           "format": "int32",
+          "description": "Export type ID",
           "type": "integer"
         },
         "CreateExportUri": {
+          "description": "Create export URI",
           "type": "string"
         },
         "ExportUsername": {
+          "description": "Export username",
           "type": "string"
         },
         "ExportPassword": {
+          "description": "Export password",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency report active?",
           "type": "boolean"
         },
         "EditExportUri": {
+          "description": "Edit export URI",
           "type": "string"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyApplication": {
+      "description": "Agency application",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ApplicationId": {
           "format": "int32",
+          "description": "Database ID of the related application",
           "type": "integer"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the application",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the application",
           "type": "string"
         },
         "Enabled": {
+          "description": "Is the agency application enabled?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyApplicationResult": {
+      "description": "Agency application information",
       "type": "object",
       "properties": {
         "ApplicationId": {
           "format": "int32",
+          "description": "Database ID of the related application",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "MasterCode": {
+          "description": "Master code",
           "type": "string"
         },
         "ApplicationName": {
+          "description": "Application name",
           "type": "string"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the application",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the application",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency application active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyBenchmark": {
+      "description": "Agency benchmark",
       "type": "object",
       "properties": {
         "BenchmarkId": {
           "format": "int32",
+          "description": "Database ID of the related benchmark",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "BenchmarkTypeId": {
           "format": "int32",
+          "description": "Database ID of the related benchmark type",
           "type": "integer"
         },
         "BenchmarkName": {
+          "description": "Benchmark name",
           "type": "string"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the benchmark",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the benchmark",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency benchmark active?",
           "type": "boolean"
         },
         "IgnoreForClient": {
+          "description": "Ignore for client?",
           "type": "boolean"
         },
         "BenchmarkAirId": {
           "format": "int32",
+          "description": "Benchmark air ID",
           "type": "integer"
         },
         "BenchmarkAir": {
-          "$ref": "#/definitions/Troovo.Business.DTO.Core.BenchmarkAir"
+          "$ref": "#/definitions/Troovo.Business.DTO.Core.BenchmarkAir",
+          "description": "Benchmark air information"
         },
         "BenchmarkHotelId": {
           "format": "int32",
+          "description": "Benchmark hotel ID",
           "type": "integer"
         },
         "BenchmarkCarId": {
           "format": "int32",
+          "description": "Benchmark car ID",
           "type": "integer"
         }
       }
     },
     "Troovo.Business.DTO.Core.BenchmarkAir": {
+      "description": "Benchmark air information",
       "type": "object",
       "properties": {
         "BenchmarkAirId": {
           "format": "int32",
+          "description": "Database ID of the benchmark air",
           "type": "integer"
         },
         "AirlineId": {
           "format": "int32",
+          "description": "Airline ID",
           "type": "integer"
         },
         "FareTypeId": {
           "format": "int32",
+          "description": "Faretype ID",
           "type": "integer"
         },
         "BookingClass": {
+          "description": "Booking class",
           "type": "string"
         },
         "TripTypeId": {
           "format": "int32",
+          "description": "Trip type ID",
           "type": "integer"
         },
         "DepartureTolerance": {
           "format": "int32",
+          "description": "Departure tolerance",
           "type": "integer"
         },
         "DirectFlight": {
+          "description": "Direct flight",
           "type": "boolean"
         },
         "UseCorporateCodes": {
+          "description": "Use corporate codes?",
           "type": "boolean"
         },
         "UseDepartureCity": {
+          "description": "Use departure city?",
           "type": "boolean"
         },
         "UseArrivalCity": {
+          "description": "Use arrival city?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyBenchmark_Ex": {
+      "description": "Agency benchmark information",
       "type": "object",
       "properties": {
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "BenchmarkTypeName": {
+          "description": "Benchmark type name",
           "type": "string"
         },
         "BenchmarkId": {
           "format": "int32",
+          "description": "Database ID of the related benchmark",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "BenchmarkTypeId": {
           "format": "int32",
+          "description": "Database ID of the related benchmark type",
           "type": "integer"
         },
         "BenchmarkName": {
+          "description": "Benchmark name",
           "type": "string"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the benchmark",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the benchmark",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency benchmark active?",
           "type": "boolean"
         },
         "IgnoreForClient": {
+          "description": "Ignore for client?",
           "type": "boolean"
         },
         "BenchmarkAirId": {
           "format": "int32",
+          "description": "Benchmark air ID",
           "type": "integer"
         },
         "BenchmarkAir": {
-          "$ref": "#/definitions/Troovo.Business.DTO.Core.BenchmarkAir"
+          "$ref": "#/definitions/Troovo.Business.DTO.Core.BenchmarkAir",
+          "description": "Benchmark air information"
         },
         "BenchmarkHotelId": {
           "format": "int32",
+          "description": "Benchmark hotel ID",
           "type": "integer"
         },
         "BenchmarkCarId": {
           "format": "int32",
+          "description": "Benchmark car ID",
           "type": "integer"
         }
       }
     },
     "Troovo.Business.DTO.Core.BenchmarkCarrier": {
+      "description": "Benchmark carrier",
       "type": "object",
       "properties": {
         "BenchmarkCarrierId": {
           "format": "int32",
+          "description": "Database ID of the benchmark carrier",
           "type": "integer"
         },
         "BenchmarkId": {
           "format": "int32",
+          "description": "Database ID of the related benchmark",
           "type": "integer"
         },
         "AirLineId": {
           "format": "int32",
+          "description": "Airline ID",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the benchmark carrier active?",
           "type": "boolean"
         }
       }
