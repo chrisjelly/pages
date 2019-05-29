@@ -1955,17 +1955,26 @@
           "200": {
             "description": "Import was completed but some rows could not be imported.",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
             "description": "Import was successfully completed and all rows were imported without any errors",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "415": {
+            "description": "Unsupported media type."
           },
           "500": {
             "description": "Import failed due to an internal server error."
