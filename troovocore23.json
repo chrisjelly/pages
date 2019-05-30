@@ -4241,6 +4241,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipient"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4269,6 +4272,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipient"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4297,6 +4303,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipient"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4320,6 +4329,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4353,6 +4365,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipient"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4386,6 +4401,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipient"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4416,6 +4434,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4444,6 +4465,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4472,6 +4496,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4495,6 +4522,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4528,6 +4558,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4561,6 +4594,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4584,6 +4620,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4614,6 +4653,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4642,6 +4684,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4670,6 +4715,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4693,6 +4741,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4726,6 +4777,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4759,6 +4813,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4782,6 +4839,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentRecipientType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4812,6 +4872,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentTemplate"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4840,6 +4903,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentTemplate"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4868,6 +4934,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentTemplate"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4891,6 +4960,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentTemplateResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4924,6 +4996,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentTemplate"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -4957,6 +5032,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentTemplate"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -4987,6 +5065,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5015,6 +5096,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5043,6 +5127,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5066,6 +5153,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5099,6 +5189,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5132,6 +5225,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5155,6 +5251,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyDocumentType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5178,6 +5277,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFeeResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5211,6 +5313,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFee"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5244,6 +5352,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFee"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5262,6 +5376,7 @@
           {
             "name": "offset",
             "in": "query",
+            "description": "Offset",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -5269,6 +5384,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Limit",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -5276,18 +5392,21 @@
           {
             "name": "sort",
             "in": "query",
+            "description": "Sort",
             "required": false,
             "type": "string"
           },
           {
             "name": "order",
             "in": "query",
+            "description": "Order",
             "required": false,
             "type": "string"
           },
           {
             "name": "search",
             "in": "query",
+            "description": "Search",
             "required": false,
             "type": "string"
           }
@@ -5298,6 +5417,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFee_Paged"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5328,6 +5450,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFee"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5356,6 +5484,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFee"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5384,6 +5518,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyFee"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5414,6 +5554,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Fin.AgencyFinanceItemType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5442,6 +5585,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Fin.AgencyFinanceItemType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5470,6 +5616,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Fin.AgencyFinanceItemType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5493,6 +5642,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Fin.AgencyFinanceItemType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5526,6 +5678,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Fin.AgencyFinanceItemType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5559,6 +5714,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Fin.AgencyFinanceItemType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5589,6 +5747,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Fin.AgencyFinanceItemType"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5612,6 +5773,9 @@
                 "$ref": "#/definitions/Troovo.Data.Models.Core.Users_GetAllowedActionsByController_Result"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -24777,275 +24941,350 @@
       }
     },
     "Troovo.Business.DTO.Core.AgencyDocumentRecipient": {
+      "description": "Agency document recipient",
       "type": "object",
       "properties": {
         "AgencyDocumentRecipientId": {
           "format": "int32",
+          "description": "Database ID of the agency document recipient",
           "type": "integer"
         },
         "AgencyDocumentId": {
           "format": "int32",
+          "description": "Database ID of the related agency document",
           "type": "integer"
         },
         "RecipientName": {
+          "description": "Recipient name",
           "type": "string"
         },
         "RecipientTypeId": {
           "format": "int32",
+          "description": "Database ID of the related recipient type",
           "type": "integer"
         },
         "RecipientEmail": {
+          "description": "Recipient email",
           "type": "string"
         },
         "RecipientEmailTypeId": {
           "format": "int32",
+          "description": "Recipient email type ID",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency document recipient active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyDocumentRecipientResult": {
+      "description": "Agency document recipient",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency document recipient active?",
           "type": "boolean"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "MasterCode": {
+          "description": "Master code",
           "type": "string"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "AgencyDocumentRecipientId": {
           "format": "int32",
+          "description": "Database ID of the agency document recipient",
           "type": "integer"
         },
         "AgencyDocumentId": {
           "format": "int32",
+          "description": "Database ID of the related agency document",
           "type": "integer"
         },
         "AgencyDocumentTypeId": {
           "format": "int32",
+          "description": "Database ID of the related agency document type",
           "type": "integer"
         },
         "AgencyDocumentTypeCode": {
+          "description": "Agency document type code",
           "type": "string"
         },
         "AgencyDocumentTypeName": {
+          "description": "Agency document type name",
           "type": "string"
         },
         "RecipientTypeId": {
           "format": "int32",
+          "description": "Recipient type ID",
           "type": "integer"
         },
         "RecipientName": {
+          "description": "Recipient name",
           "type": "string"
         },
         "AgencyDocumentRecipientTypeCode": {
+          "description": "Agency document recipient type code",
           "type": "string"
         },
         "AgencyDocumentRecipientTypeName": {
+          "description": "Agency document recipient type name",
           "type": "string"
         },
         "RecipientEmail": {
+          "description": "Recipient email",
           "type": "string"
         },
         "RecipientEmailTypeId": {
           "format": "int32",
+          "description": "Recipient email type ID",
           "type": "integer"
         },
         "RecipientEmailType": {
+          "description": "Recipient email type",
           "type": "string"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyDocumentRecipientEmailType": {
+      "description": "Agency document recipient email type",
       "type": "object",
       "properties": {
         "AgencyDocumentRecipientEmailTypeId": {
           "format": "int32",
+          "description": "Database ID of the agency document recipient email type",
           "type": "integer"
         },
         "RecipientEmailType": {
+          "description": "Recipient email type",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency document recipient email type active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyDocumentRecipientType": {
+      "description": "Agency document recipient type",
       "type": "object",
       "properties": {
         "AgencyDocumentRecipientTypeId": {
           "format": "int32",
+          "description": "Database ID of the agency document recipient type",
           "type": "integer"
         },
         "AgencyDocumentRecipientTypeCode": {
+          "description": "Agency document recipient type code",
           "type": "string"
         },
         "AgencyDocumentRecipientTypeName": {
+          "description": "Agency document recipient type name",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency document recipient type active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyDocumentTemplate": {
+      "description": "Agency document template",
       "type": "object",
       "properties": {
         "AgencyDocumentTemplateId": {
           "format": "int32",
+          "description": "Database ID of the agency document template",
           "type": "integer"
         },
         "AgencyDocumentTypeId": {
           "format": "int32",
+          "description": "Database ID of the related agency document type",
           "type": "integer"
         },
         "NotificationTemplateId": {
           "format": "int32",
+          "description": "Notification template ID",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency document template active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyDocumentTemplateResult": {
+      "description": "Agency document template",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency document template active?",
           "type": "boolean"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "MasterCode": {
+          "description": "Master code",
           "type": "string"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "AgencyDocumentTemplateId": {
           "format": "int32",
+          "description": "Database ID of the agency document template",
           "type": "integer"
         },
         "AgencyDocumentTypeId": {
           "format": "int32",
+          "description": "Agency document type ID",
           "type": "integer"
         },
         "AgencyDocumentTypeCode": {
+          "description": "Agency document type code",
           "type": "string"
         },
         "AgencyDocumentTypeName": {
+          "description": "Agency document type name",
           "type": "string"
         },
         "NotificationTemplateId": {
           "format": "int32",
+          "description": "Notification template ID",
           "type": "integer"
         },
         "DocumentTemplateId": {
           "format": "int32",
+          "description": "Document template ID",
           "type": "integer"
         },
         "NotificationTitle": {
+          "description": "Notification title",
           "type": "string"
         },
         "NotificationTypeId": {
           "format": "int32",
+          "description": "Notification type ID",
           "type": "integer"
         },
         "NotificationTypeName": {
+          "description": "Notification type name",
           "type": "string"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyDocumentType": {
+      "description": "Agency document type",
       "type": "object",
       "properties": {
         "AgencyDocumentTypeId": {
           "format": "int32",
+          "description": "Database ID of the agency document type",
           "type": "integer"
         },
         "AgencyDocumentTypeCode": {
+          "description": "Agency document type code",
           "type": "string"
         },
         "AgencyDocumentTypeName": {
+          "description": "Agency document type name",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency document type active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyFee": {
+      "description": "Agency fee information",
       "type": "object",
       "properties": {
         "AgencyFeeId": {
           "format": "int32",
+          "description": "The Agency Fee ID from the database",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "FeeCodeId": {
           "format": "int32",
+          "description": "Fee code ID",
           "type": "integer"
         },
         "ExGST": {
           "format": "double",
+          "description": "Ex GST",
           "type": "number"
         },
         "GST": {
           "format": "double",
+          "description": "GST",
           "type": "number"
         },
         "CurrencyId": {
           "format": "int32",
+          "description": "Currency ID",
           "type": "integer"
         },
         "IncludesMerchantFee": {
+          "description": "Includes merchant fee?",
           "type": "boolean"
         },
         "IsActive": {
+          "description": "Is the agency fee active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyFee_Paged": {
+      "description": "Paged agency fees",
       "type": "object",
       "properties": {
         "agencyFees": {
@@ -25056,48 +25295,61 @@
         },
         "total": {
           "format": "int32",
+          "description": "Total number of agency fees returned",
           "type": "integer"
         }
       }
     },
     "Troovo.Business.DTO.Fin.AgencyFinanceItemType": {
+      "description": "Agency finance item type",
       "type": "object",
       "properties": {
         "AgencyFinanceItemTypeId": {
           "format": "int32",
+          "description": "Database ID of the agency finance item type",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "PrimaryType": {
+          "description": "Primary type",
           "type": "string"
         },
         "ModuleId": {
           "format": "int32",
+          "description": "Module ID",
           "type": "integer"
         },
         "ModuleName": {
+          "description": "Module name",
           "type": "string"
         },
         "SecondaryType": {
+          "description": "Secondary type",
           "type": "string"
         },
         "PrimaryTypeName": {
+          "description": "Primary type name",
           "type": "string"
         },
         "SecondaryTypeName": {
+          "description": "Secondary type name",
           "type": "string"
         },
         "CalculationType": {
+          "description": "Calculation type",
           "type": "string"
         },
         "CalculationAmount": {
           "format": "double",
+          "description": "Calculation amount",
           "type": "number"
         },
         "IsActive": {
+          "description": "Is the agency finance item type active?",
           "type": "boolean"
         }
       }
