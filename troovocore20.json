@@ -3382,17 +3382,26 @@
           "200": {
             "description": "Import was completed but some rows could not be imported.",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
             "description": "Import was successfully completed and all rows were imported without any errors",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "415": {
+            "description": "Unsupported media type."
           },
           "500": {
             "description": "Import failed due to an internal server error."
@@ -3419,6 +3428,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommissionResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3452,6 +3464,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommission"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3483,9 +3501,14 @@
           "200": {
             "description": "OK",
             "schema": {
-              "format": "int32",
-              "type": "integer"
+              "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommission"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -3504,6 +3527,7 @@
           {
             "name": "offset",
             "in": "query",
+            "description": "Offset",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -3511,6 +3535,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Limit",
             "required": false,
             "type": "integer",
             "format": "int32"
@@ -3518,18 +3543,21 @@
           {
             "name": "sort",
             "in": "query",
+            "description": "Sort",
             "required": false,
             "type": "string"
           },
           {
             "name": "order",
             "in": "query",
+            "description": "Order",
             "required": false,
             "type": "string"
           },
           {
             "name": "search",
             "in": "query",
+            "description": "Search",
             "required": false,
             "type": "string"
           }
@@ -3540,6 +3568,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommission_Paged"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -3570,6 +3601,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommission"
             }
+          },
+          "404": {
+            "description": "NotFound"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3598,6 +3635,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommission"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3626,6 +3669,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCommission"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -3644,17 +3693,26 @@
           "200": {
             "description": "Import was completed but some rows could not be imported.",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
             "description": "Import was successfully completed and all rows were imported without any errors",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
+          },
+          "415": {
+            "description": "Unsupported media type."
           },
           "500": {
             "description": "Import failed due to an internal server error."
@@ -3681,6 +3739,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCustomRule_Ex"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3714,6 +3775,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCustomRule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3747,6 +3814,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCustomRule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -3765,6 +3838,7 @@
           {
             "name": "agencyCustomRuleId",
             "in": "path",
+            "description": "Agency custom rule ID",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -3779,6 +3853,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCustomRule"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3807,6 +3887,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCustomRule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -3835,6 +3921,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyCustomRule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -24434,6 +24526,7 @@
       }
     },
     "Troovo.Business.DTO.Core.AgencyCommission_Paged": {
+      "description": "Paged agency commissions",
       "type": "object",
       "properties": {
         "agencyCommissions": {
@@ -24444,6 +24537,7 @@
         },
         "total": {
           "format": "int32",
+          "description": "Total amount of agency commissions",
           "type": "integer"
         }
       }
@@ -24453,70 +24547,89 @@
       "type": "object",
       "properties": {
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "AgencyCustomRuleId": {
           "format": "int32",
+          "description": "Database ID of the agency custom rule",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "RuleName": {
+          "description": "Rule name",
           "type": "string"
         },
         "RulesXML": {
+          "description": "Rules XML",
           "type": "string"
         },
         "RuleSetXML": {
+          "description": "Ruleset XML",
           "type": "string"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the rule validity",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the rule validity",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency custom rule active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyCustomRule": {
+      "description": "Agency custom rule",
       "type": "object",
       "properties": {
         "AgencyCustomRuleId": {
           "format": "int32",
+          "description": "Database ID of the agency custom rule",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "RuleName": {
+          "description": "Rule name",
           "type": "string"
         },
         "RulesXML": {
+          "description": "Rules XML",
           "type": "string"
         },
         "RuleSetXML": {
+          "description": "Ruleset XML",
           "type": "string"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date of the rule validity",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date of the rule validity",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency custom rule active?",
           "type": "boolean"
         }
       }
