@@ -25,7 +25,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -34,22 +34,19 @@
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
-              }
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
           "415": {
-            "description": "Unsupported media type."
+            "description": "UnsupportedMediaType"
           },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -1953,7 +1950,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -1962,22 +1959,19 @@
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
-              }
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
           "415": {
-            "description": "Unsupported media type."
+            "description": "UnsupportedMediaType"
           },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -3380,7 +3374,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -3389,22 +3383,19 @@
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
-              }
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
           "415": {
-            "description": "Unsupported media type."
+            "description": "UnsupportedMediaType"
           },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -3691,7 +3682,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -3700,22 +3691,19 @@
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
-              }
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
           "415": {
-            "description": "Unsupported media type."
+            "description": "UnsupportedMediaType"
           },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -3945,7 +3933,7 @@
           "200": {
             "description": "Export was completed.",
             "schema": {
-              "$ref": "#/definitions/System.Net.Http.StreamContent"
+              "type": "object"
             }
           },
           "401": {
@@ -3967,7 +3955,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
               "type": "array",
               "items": {
@@ -3976,22 +3964,19 @@
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
-              }
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
           "415": {
-            "description": "Unsupported media type."
+            "description": "UnsupportedMediaType"
           },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -5806,6 +5791,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroup"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5834,6 +5822,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroup"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5862,6 +5853,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroup"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5885,6 +5879,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroup"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5918,6 +5915,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroup"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -5951,6 +5951,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroup"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -5981,6 +5984,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroupAgency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6004,6 +6010,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroupAgencyResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6037,6 +6046,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroupAgency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6070,6 +6082,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroupAgency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6093,6 +6108,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroupAgencyResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6131,6 +6149,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroupAgency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6167,6 +6188,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyGroupAgency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6205,6 +6229,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6241,6 +6268,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6277,6 +6307,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6300,6 +6333,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6333,6 +6369,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6366,6 +6405,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6399,6 +6441,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6432,6 +6477,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Agency"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6470,6 +6518,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Code"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6506,6 +6557,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Code"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6529,6 +6583,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Code"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6562,6 +6619,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Code"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6595,6 +6655,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Code"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6628,6 +6691,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Code"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6661,6 +6727,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel_Code"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6691,6 +6760,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6719,6 +6791,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6747,6 +6822,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6770,6 +6848,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6803,6 +6884,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -6836,6 +6920,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6854,6 +6941,7 @@
           {
             "name": "agencyId",
             "in": "path",
+            "description": "Agency ID",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -6861,6 +6949,7 @@
           {
             "name": "status",
             "in": "path",
+            "description": "Status",
             "required": true,
             "type": "string"
           }
@@ -6874,6 +6963,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6883,7 +6975,7 @@
         "tags": [
           "AgencyHotels"
         ],
-        "summary": "Gets all AgencyHotels for the given user and agency",
+        "summary": "Gets paged AgencyHotels for the given user and agency",
         "operationId": "AgencyHotels_Get_All_Paged",
         "consumes": [
           
@@ -6892,6 +6984,7 @@
           {
             "name": "agencyId",
             "in": "path",
+            "description": "Agency ID",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -6899,12 +6992,14 @@
           {
             "name": "status",
             "in": "path",
+            "description": "Status",
             "required": true,
             "type": "string"
           },
           {
             "name": "offset",
             "in": "query",
+            "description": "Offset",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -6912,6 +7007,7 @@
           {
             "name": "limit",
             "in": "query",
+            "description": "Limit",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -6919,18 +7015,21 @@
           {
             "name": "sort",
             "in": "query",
+            "description": "Sort",
             "required": false,
             "type": "string"
           },
           {
             "name": "search",
             "in": "query",
+            "description": "Search",
             "required": false,
             "type": "string"
           },
           {
             "name": "order",
             "in": "query",
+            "description": "Order",
             "required": false,
             "type": "string"
           }
@@ -6941,6 +7040,9 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotels_Paged"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6950,7 +7052,7 @@
         "tags": [
           "AgencyHotels"
         ],
-        "summary": "Gets all AgencyHotel",
+        "summary": "Validate invalid",
         "operationId": "AgencyHotels_Validate_Invalid",
         "consumes": [
           
@@ -6962,6 +7064,9 @@
               "format": "int32",
               "type": "integer"
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -6985,6 +7090,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyNotificationTemplateResult"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7015,6 +7123,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueComplete"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7043,6 +7157,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueComplete"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7071,6 +7191,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueComplete"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7094,6 +7220,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueComplete_Ex"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7127,6 +7256,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueComplete"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7160,6 +7295,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueComplete"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7190,6 +7331,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueDestination"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7218,6 +7365,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueDestination"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7246,6 +7399,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueDestination"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7269,6 +7428,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueDestination_Ex"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7302,6 +7464,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueDestination"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7335,6 +7503,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueDestination"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7365,6 +7539,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueModule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7393,6 +7573,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueModule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7421,6 +7607,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueModule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7444,6 +7636,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueModule_Ex"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7477,6 +7672,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueModule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7510,6 +7711,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyQueueModule"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7540,6 +7747,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7563,6 +7776,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7596,6 +7812,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7629,6 +7851,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7659,6 +7887,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7687,6 +7921,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyRemarkType"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7703,22 +7943,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -7752,6 +7998,12 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyReport"
               }
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7775,6 +8027,9 @@
                 "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyReport"
               }
             }
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7808,6 +8063,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyReport"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       },
@@ -7841,6 +8102,12 @@
             "schema": {
               "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyReport"
             }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "InternalServerError"
           }
         }
       }
@@ -7857,22 +8124,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -8638,22 +8911,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -10887,22 +11166,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -10919,22 +11204,25 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "$ref": "#/definitions/Troovo.Business.DTO.Fin.BSPMaster"
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -12127,22 +12415,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -12194,22 +12488,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -12226,22 +12526,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -12697,22 +13003,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -13441,22 +13753,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -13772,22 +14090,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -14015,22 +14339,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -14290,22 +14620,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -14751,22 +15087,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -15605,22 +15947,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -17209,16 +17557,19 @@
         ],
         "responses": {
           "200": {
-            "description": "Export was completed.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "$ref": "#/definitions/System.Net.Http.StreamContent"
             }
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
           "500": {
-            "description": "Export failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -17245,16 +17596,19 @@
         ],
         "responses": {
           "200": {
-            "description": "Export was completed.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "$ref": "#/definitions/System.Net.Http.StreamContent"
             }
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
           "500": {
-            "description": "Export failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -17469,22 +17823,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -18473,22 +18833,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -18921,22 +19287,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -20545,22 +20917,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Import was completed but some rows could not be imported.",
+            "description": "OK",
             "schema": {
-              "type": "object"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Troovo.API.Models.RowFailedMessage"
+              }
             }
           },
           "204": {
-            "description": "Import was successfully completed and all rows were imported without any errors",
-            "schema": {
-              "type": "object"
-            }
+            "description": "NoContent"
+          },
+          "400": {
+            "description": "BadRequest"
           },
           "401": {
             "description": "Azure authentication token has expired. User needs to login again."
           },
+          "415": {
+            "description": "UnsupportedMediaType"
+          },
           "500": {
-            "description": "Import failed due to an internal server error."
+            "description": "InternalServerError"
           }
         }
       }
@@ -24828,34 +25206,6 @@
         }
       }
     },
-    "System.Net.Http.StreamContent": {
-      "type": "object",
-      "properties": {
-        "Headers": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/System.Collections.Generic.KeyValuePair[System.String,System.Collections.Generic.IEnumerable[System.String]]"
-          },
-          "readOnly": true
-        }
-      }
-    },
-    "System.Collections.Generic.KeyValuePair[System.String,System.Collections.Generic.IEnumerable[System.String]]": {
-      "type": "object",
-      "properties": {
-        "Key": {
-          "type": "string",
-          "readOnly": true
-        },
-        "Value": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "readOnly": true
-        }
-      }
-    },
     "Troovo.Business.DTO.Core.AgencyDocument": {
       "description": "Agency document",
       "type": "object",
@@ -25366,211 +25716,271 @@
       }
     },
     "Troovo.Business.DTO.Core.AgencyGroup": {
+      "description": "Agency group information",
       "type": "object",
       "properties": {
         "AgencyGroupId": {
           "format": "int32",
+          "description": "Database ID of the agency group",
           "type": "integer"
         },
         "AgencyGroupCode": {
+          "description": "Agency group code",
           "type": "string"
         },
         "AgencyGroupName": {
+          "description": "Agency group name",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency group active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyGroupAgency": {
+      "description": "Agency group agency",
       "type": "object",
       "properties": {
         "AgencyGroupId": {
           "format": "int32",
+          "description": "Database ID of the related agency group",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency group agency active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyGroupAgencyResult": {
+      "description": "Agency group agency information",
       "type": "object",
       "properties": {
         "AgencyGroupId": {
           "format": "int32",
+          "description": "Database ID of the related agency group",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "MasterCode": {
+          "description": "Master code",
           "type": "string"
         },
         "AgencyGroupCode": {
+          "description": "Agency group code",
           "type": "string"
         },
         "AgencyGroupName": {
+          "description": "Agency group name",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency group agency active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyHotel_Agency": {
+      "description": "Agency hotel agency information",
       "type": "object",
       "properties": {
         "AgencyHotelId": {
           "format": "int32",
+          "description": "Database ID of the related agency hotel",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency hotel agency active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyHotel_Code": {
+      "description": "Agency Hotel Code information",
       "type": "object",
       "properties": {
         "AgencyHotelId": {
           "format": "int32",
+          "description": "Database ID of the related Agency Hotel",
           "type": "integer"
         },
         "HotelCodeTypeId": {
           "format": "int32",
+          "description": "Database ID of the related Hotel Code Type",
           "type": "integer"
         },
         "Code": {
+          "description": "Hotel code",
           "type": "string"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyHotel": {
+      "description": "Agency Hotel information",
       "type": "object",
       "properties": {
         "agencyActive": {
+          "description": "Is the agency active?",
           "type": "boolean"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "UserId": {
           "format": "int32",
+          "description": "User ID",
           "type": "integer"
         },
         "Code": {
+          "description": "Code",
           "type": "string"
         },
         "HotelCodeTypeId": {
           "format": "int32",
+          "description": "Hotel code type ID",
           "type": "integer"
         },
         "HotelCodeType": {
+          "description": "Hotel code type",
           "type": "string"
         },
         "codeActive": {
+          "description": "Is the code active?",
           "type": "boolean"
         },
         "AgencyHotelId": {
           "format": "int32",
+          "description": "Database ID of the Agency Hotel",
           "type": "integer"
         },
         "Name": {
+          "description": "Name",
           "type": "string"
         },
         "Fax": {
+          "description": "Fax",
           "type": "string"
         },
         "email": {
+          "description": "Email",
           "type": "string"
         },
         "FaxValid": {
+          "description": "Is the fax valid?",
           "type": "boolean"
         },
         "EmailValid": {
+          "description": "Is the email valid?",
           "type": "boolean"
         },
         "CityCode": {
+          "description": "City code",
           "type": "string"
         },
         "Phone": {
+          "description": "Phone",
           "type": "string"
         },
         "Address": {
+          "description": "Address line 1",
           "type": "string"
         },
         "Address2": {
+          "description": "Address line 2",
           "type": "string"
         },
         "Address3": {
+          "description": "Address line 3",
           "type": "string"
         },
         "State": {
+          "description": "State",
           "type": "string"
         },
         "Country": {
+          "description": "Country",
           "type": "string"
         },
         "PostCode": {
+          "description": "Post code",
           "type": "string"
         },
         "PostalAddress": {
+          "description": "Postal address line 1",
           "type": "string"
         },
         "PostalAddress2": {
+          "description": "Postal address line 2",
           "type": "string"
         },
         "PostalAddress3": {
+          "description": "Postal address line 3",
           "type": "string"
         },
         "PostalState": {
+          "description": "Postal state",
           "type": "string"
         },
         "PostalPostCode": {
+          "description": "Postal post code",
           "type": "string"
         },
         "PostalCountry": {
+          "description": "Postal country",
           "type": "string"
         },
         "Created": {
           "format": "date-time",
+          "description": "Created date and time",
           "type": "string"
         },
         "Updated": {
           "format": "date-time",
+          "description": "Updated date and time",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency hotel active?",
           "type": "boolean"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyHotels_Paged": {
+      "description": "Paged agency hotels",
       "type": "object",
       "properties": {
         "total": {
           "format": "int32",
+          "description": "Total number of agency hotels returned",
           "type": "integer"
         },
         "rows": {
+          "description": "Agency hotel information",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Troovo.Business.DTO.Core.AgencyHotel"
@@ -25579,340 +25989,431 @@
       }
     },
     "Troovo.Business.DTO.Core.AgencyNotificationTemplateResult": {
+      "description": "Agency notification template information",
       "type": "object",
       "properties": {
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ClientId": {
           "format": "int32",
+          "description": "Client ID",
           "type": "integer"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "MasterCode": {
+          "description": "Master code",
           "type": "string"
         },
         "ClientCode": {
+          "description": "Client code",
           "type": "string"
         },
         "ClientName": {
+          "description": "Client name",
           "type": "string"
         },
         "NotificationTemplateId": {
           "format": "int32",
+          "description": "Database ID of the related notification template",
           "type": "integer"
         },
         "DocumentTemplateId": {
           "format": "int32",
+          "description": "Document template ID",
           "type": "integer"
         },
         "NotificationTitle": {
+          "description": "Notification title",
           "type": "string"
         },
         "NotificationTypeId": {
           "format": "int32",
+          "description": "Notification type ID",
           "type": "integer"
         },
         "NotificationTypeName": {
+          "description": "Notification type name",
           "type": "string"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyQueueComplete": {
+      "description": "Agency queue complete",
       "type": "object",
       "properties": {
         "AgencyQueueCompleteId": {
           "format": "int32",
+          "description": "Database ID of the agency queue complete",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Pseudo-city code ID",
           "type": "integer"
         },
         "QueueId": {
           "format": "int32",
+          "description": "Queue ID",
           "type": "integer"
         },
         "MustCompletePseudoCityCodeId": {
           "format": "int32",
+          "description": "Must complete pseudo-city code ID",
           "type": "integer"
         },
         "MustCompleteQueueId": {
           "format": "int32",
+          "description": "Must complete queue ID",
           "type": "integer"
         },
         "Order": {
           "format": "int32",
+          "description": "Order",
           "type": "integer"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency queue complete active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyQueueComplete_Ex": {
+      "description": "Agency queue complete information",
       "type": "object",
       "properties": {
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "QueueName": {
+          "description": "Queue name",
           "type": "string"
         },
         "QueueNo": {
           "format": "int32",
+          "description": "Queue number",
           "type": "integer"
         },
         "QueueCategory": {
+          "description": "Queue category",
           "type": "string"
         },
         "MustCompleteQueueName": {
+          "description": "Must complete queue name",
           "type": "string"
         },
         "MustCompleteQueueNo": {
           "format": "int32",
+          "description": "Must complete queue number",
           "type": "integer"
         },
         "MustCompleteQueueCategory": {
+          "description": "Must complete queue category",
           "type": "string"
         },
         "AgencyQueueCompleteId": {
           "format": "int32",
+          "description": "Database ID of the agency queue complete",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Pseudo-city code ID",
           "type": "integer"
         },
         "QueueId": {
           "format": "int32",
+          "description": "Queue ID",
           "type": "integer"
         },
         "MustCompletePseudoCityCodeId": {
           "format": "int32",
+          "description": "Must complete pseudo-city code ID",
           "type": "integer"
         },
         "MustCompleteQueueId": {
           "format": "int32",
+          "description": "Must complete queue ID",
           "type": "integer"
         },
         "Order": {
           "format": "int32",
+          "description": "Order",
           "type": "integer"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency queue complete active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyQueueDestination": {
+      "description": "Agency queue destination",
       "type": "object",
       "properties": {
         "AgencyQueueDestinationId": {
           "format": "int32",
+          "description": "Database ID of the agency queue destination",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ModuleId": {
           "format": "int32",
+          "description": "Module ID",
           "type": "integer"
         },
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Pseudo-city code ID",
           "type": "integer"
         },
         "DestinationQueueId": {
           "format": "int32",
+          "description": "Destination queue ID",
           "type": "integer"
         },
         "DestinationQueueNo": {
           "format": "int32",
+          "description": "Destination queue number",
           "type": "integer"
         },
         "DestinationQueueCategory": {
+          "description": "Destination queue category",
           "type": "string"
         },
         "DestinationPCC": {
+          "description": "Destination pseudo-city code",
           "type": "string"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency queue destination active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyQueueDestination_Ex": {
+      "description": "Agency queue destination information",
       "type": "object",
       "properties": {
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "ModuleName": {
+          "description": "Module name",
           "type": "string"
         },
         "PCC": {
+          "description": "Pseudo-city code",
           "type": "string"
         },
         "DestinationQueueName": {
+          "description": "Destination queue name",
           "type": "string"
         },
         "AgencyQueueDestinationId": {
           "format": "int32",
+          "description": "Database ID of the agency queue destination",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ModuleId": {
           "format": "int32",
+          "description": "Module ID",
           "type": "integer"
         },
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Pseudo-city code ID",
           "type": "integer"
         },
         "DestinationQueueId": {
           "format": "int32",
+          "description": "Destination queue ID",
           "type": "integer"
         },
         "DestinationQueueNo": {
           "format": "int32",
+          "description": "Destination queue number",
           "type": "integer"
         },
         "DestinationQueueCategory": {
+          "description": "Destination queue category",
           "type": "string"
         },
         "DestinationPCC": {
+          "description": "Destination pseudo-city code",
           "type": "string"
         },
         "StartDate": {
           "format": "date-time",
+          "description": "Start date",
           "type": "string"
         },
         "EndDate": {
           "format": "date-time",
+          "description": "End date",
           "type": "string"
         },
         "IsActive": {
+          "description": "Is the agency queue destination active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyQueueModule": {
+      "description": "Agency queue module",
       "type": "object",
       "properties": {
         "AgencyQueueModuleId": {
           "format": "int32",
+          "description": "Database ID of the agency queue module",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ModuleId": {
           "format": "int32",
+          "description": "Module ID",
           "type": "integer"
         },
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Pseudo-city code ID",
           "type": "integer"
         },
         "QueueId": {
           "format": "int32",
+          "description": "Queue ID",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency queue module active?",
           "type": "boolean"
         }
       }
     },
     "Troovo.Business.DTO.Core.AgencyQueueModule_Ex": {
+      "description": "Agency queue module",
       "type": "object",
       "properties": {
         "AgencyCode": {
+          "description": "Agency code",
           "type": "string"
         },
         "AgencyName": {
+          "description": "Agency name",
           "type": "string"
         },
         "ModuleName": {
+          "description": "Module name",
           "type": "string"
         },
         "QueueNo": {
           "format": "int32",
+          "description": "Queue number",
           "type": "integer"
         },
         "QueueCategory": {
+          "description": "Queue category",
           "type": "string"
         },
         "QueueName": {
+          "description": "Queue name",
           "type": "string"
         },
         "AgencyQueueModuleId": {
           "format": "int32",
+          "description": "Database ID of the agency queue module",
           "type": "integer"
         },
         "AgencyId": {
           "format": "int32",
+          "description": "Database ID of the related agency",
           "type": "integer"
         },
         "ModuleId": {
           "format": "int32",
+          "description": "Module ID",
           "type": "integer"
         },
         "PseudoCityCodeId": {
           "format": "int32",
+          "description": "Pseudo-city code ID",
           "type": "integer"
         },
         "QueueId": {
           "format": "int32",
+          "description": "Queue ID",
           "type": "integer"
         },
         "IsActive": {
+          "description": "Is the agency queue module active?",
           "type": "boolean"
         }
       }
@@ -26713,34 +27214,43 @@
       }
     },
     "Troovo.Business.DTO.Fin.BSPMaster": {
+      "description": "BSPMaster",
       "type": "object",
       "properties": {
         "BSPMasterId": {
           "format": "int32",
+          "description": "Database Id of the BSPMaster",
           "type": "integer"
         },
         "BSPFileName": {
+          "description": "BSP File Name",
           "type": "string"
         },
         "ProcessDateTime": {
           "format": "date-time",
+          "description": "Process Date Time",
           "type": "string"
         },
         "AgentCode": {
+          "description": "Agent Code",
           "type": "string"
         },
         "BillingFrom": {
           "format": "date-time",
+          "description": "Start Date of Billing",
           "type": "string"
         },
         "BillingTo": {
           "format": "date-time",
+          "description": "End Date of Billing",
           "type": "string"
         },
         "Currency": {
+          "description": "Currency",
           "type": "string"
         },
         "Transactions": {
+          "description": "List of BSP Transactions",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Troovo.Business.DTO.Fin.BSPTransaction"
@@ -26749,136 +27259,174 @@
       }
     },
     "Troovo.Business.DTO.Fin.BSPTransaction": {
+      "description": "BSPTransaction",
       "type": "object",
       "properties": {
         "BSPTransactionId": {
           "format": "int32",
+          "description": "Database Id of the BSP transaction",
           "type": "integer"
         },
         "BSPMasterId": {
           "format": "int32",
+          "description": "Database Id of the related BSPMaster",
           "type": "integer"
         },
         "TransactionNumber": {
           "format": "int32",
+          "description": "Transaction number",
           "type": "integer"
         },
         "DateOfIssue": {
           "format": "date-time",
+          "description": "BSP transaction date of issue",
           "type": "string"
         },
         "CouponUseIndicator": {
+          "description": "Coupon use indicator",
           "type": "string"
         },
         "AgentNumericCode": {
+          "description": "Agent numeric code",
           "type": "string"
         },
         "PNR": {
+          "description": "Record locator",
           "type": "string"
         },
         "AirlineCharacterCode": {
+          "description": "Airline character code",
           "type": "string"
         },
         "TransactionCode": {
+          "description": "Transaction code",
           "type": "string"
         },
         "TransactionCodeBillingAnalysisGrouping": {
+          "description": "Transaction code billing analysis grouping",
           "type": "string"
         },
         "TransactionCodeDescription": {
+          "description": "Transaction code description",
           "type": "string"
         },
         "TransactionCodeType": {
+          "description": "Transaction code type",
           "type": "string"
         },
         "TransactionCodeDocumentType": {
+          "description": "Transaction code document type",
           "type": "string"
         },
         "TicketDocumentNumber": {
+          "description": "Ticket document number",
           "type": "string"
         },
         "AirlineCode": {
+          "description": "Airline code",
           "type": "string"
         },
         "FormCode": {
+          "description": "Form code",
           "type": "string"
         },
         "SerialNumber": {
+          "description": "Serial number",
           "type": "string"
         },
         "CommissionableAmount": {
           "format": "double",
+          "description": "Commissionable amount",
           "type": "number"
         },
         "TicketDocumentAmount": {
           "format": "double",
+          "description": "Ticket document amount",
           "type": "number"
         },
         "Currency": {
+          "description": "Currency",
           "type": "string"
         },
         "EffectiveCommissionRate": {
           "format": "double",
+          "description": "Effective commission rate",
           "type": "number"
         },
         "EffectiveCommissionAmount": {
           "format": "double",
+          "description": "Effective commission amount",
           "type": "number"
         },
         "StatisticalCode": {
+          "description": "Statistical code",
           "type": "string"
         },
         "CashCommissionableAmount": {
           "format": "double",
+          "description": "Cash commissionable amount",
           "type": "number"
         },
         "CreditCommissionableAmount": {
           "format": "double",
+          "description": "Credit commissionable amount",
           "type": "number"
         },
         "TotalCashTaxMiscellaneousFeeAmount": {
           "format": "double",
+          "description": "Total cash tax miscellaneous fee amount",
           "type": "number"
         },
         "TotalCreditTaxMiscellaneousFeeAmount": {
           "format": "double",
+          "description": "Total credit tax miscellaneous fee amount",
           "type": "number"
         },
         "TaxOnCommissionAmount": {
           "format": "double",
+          "description": "Tax on commission amount",
           "type": "number"
         },
         "RelatedTicketDocumentNumber": {
+          "description": "Related ticket document number",
           "type": "string"
         },
         "CashRemittanceAmount": {
           "format": "double",
+          "description": "Cash remittance amount",
           "type": "number"
         },
         "MarkForPayment": {
+          "description": "Mark for payment i.e. true/false",
           "type": "boolean"
         },
         "MarkForPaymentStatus": {
           "format": "int32",
+          "description": "Mark for payment status",
           "type": "integer"
         },
         "TicketValue": {
           "format": "double",
+          "description": "Ticket value",
           "type": "number"
         },
         "IsActive": {
+          "description": "Is the BSP Transaction active?",
           "type": "boolean"
         },
         "TicketCommission": {
           "format": "double",
+          "description": "Ticket commission",
           "type": "number"
         },
         "TicketCommissionRate": {
           "format": "double",
+          "description": "Ticket commission rate",
           "type": "number"
         },
         "TicketVariance": {
           "format": "double",
+          "description": "Ticket variance",
           "type": "number"
         }
       }
@@ -28959,6 +29507,34 @@
         },
         "Message": {
           "type": "string"
+        }
+      }
+    },
+    "System.Net.Http.StreamContent": {
+      "type": "object",
+      "properties": {
+        "Headers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/System.Collections.Generic.KeyValuePair[System.String,System.Collections.Generic.IEnumerable[System.String]]"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "System.Collections.Generic.KeyValuePair[System.String,System.Collections.Generic.IEnumerable[System.String]]": {
+      "type": "object",
+      "properties": {
+        "Key": {
+          "type": "string",
+          "readOnly": true
+        },
+        "Value": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "readOnly": true
         }
       }
     },
